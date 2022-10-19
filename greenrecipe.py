@@ -1,6 +1,6 @@
-import greenreceipt_db as db
-import greenreceipt_nlp as nlp
-import greenreceipt_web as web
+import greenrecipe_db as db
+import greenrecipe_nlp as nlp
+import greenrecipe_web as web
 
 
 
