@@ -2,8 +2,8 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
-def urlValidCheck(input:str):
-    # # INPUT(string) : Recipe URL from food.com
+def requestRecipeUrl(input:str):
+    # # INPUT(string) : Recipe name from food.com
     # # OUTPUT(Constructor | BeautifulSoup) : BeautifulSoup constructor of Recipe URL html
 
     # EXPECTED_RECIPE_PAGE = 'food.com/recipe/'
@@ -18,7 +18,7 @@ def urlValidCheck(input:str):
 
     return soup
 
-def recipeIngrd(soup:BeautifulSoup):
+def parseRecipeIngrd(soup:BeautifulSoup):
     # # INPUT(Constructor | BeautifulSoup) : BeautifulSoup constructor of Recipe URL html
     # # OUTPUT(tuple | string, List of dictionary) : Recipe Title and Ingredients List
 
@@ -63,9 +63,9 @@ def findIngrd(soup:BeautifulSoup):
                     ingrdList.append({'ingredient' : ingrd.lower(), 'quantity' : q, 'unit' : u})
                 else:
                     True
-                    # TODO Recursive Call of Scraping Recipe Page. Skip now.
+                    # TODO [CORNER CASE] Recursive Call of Scraping Recipe Page. Skip now.
             else:
-                # TODO case for the ingredient doesn't have a url link
+                # TODO [CORNER CASE] case for the ingredient doesn't have a url link
                 True
         else:
             True

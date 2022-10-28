@@ -44,7 +44,7 @@ class greenrecipe_db():
                 "WHERE ingredient = :val "
             )
 
-            # TODO handle the case that many items with the same ingredient name e.g. 'corn'
+            # TODO [CORNER CASE] handle the case that many items with the same ingredient name e.g. 'corn'
             # For now, just return the top value
             co2 = round(ingrd['quantity'] * self.ref_db_con.execute(s, val = ingrd_name).all()[0][0], 2)
             total_co2 = round(total_co2,2) + co2

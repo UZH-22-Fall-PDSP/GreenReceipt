@@ -11,8 +11,8 @@ class greenrecipe():
 
     def get_co2_emissions(self, recipe):
 
-        urlsoup = web.urlValidCheck(recipe)
-        recipeName, ingrdList = web.recipeIngrd(urlsoup)
+        urlsoup = web.requestRecipeUrl(recipe)
+        recipeName, ingrdList = web.parseRecipeIngrd(urlsoup)
 
         ingrdList = nlp.ingrd_matching(ingrdList)
         
