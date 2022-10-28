@@ -1,4 +1,4 @@
-run the code in your command line to download fastText's pretrained model in this directory 
+run the following command line in your terminal to download fastText's pretrained model in this directory 
 
 `$ ./download_model.py en`
   
