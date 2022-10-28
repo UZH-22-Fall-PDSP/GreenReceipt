@@ -14,7 +14,7 @@ class greenrecipe():
         urlsoup = web.requestRecipeUrl(recipe)
         recipeName, ingrdList = web.parseRecipeIngrd(urlsoup)
 
-        ingrdList = nlp.ingrd_matching(ingrdList)
+        ingrdList = nlp.find_similar_ing(ingrdList)
         
         total_co2, ingrdList_co2 = self.grp_db.search_ingrdCO2_total(ingrdList)
         
