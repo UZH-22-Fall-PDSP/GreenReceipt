@@ -1,12 +1,13 @@
 from flask import Flask, request, jsonify
-import greenrecipe
+import greenrecipe_total
 
 app = Flask(__name__)
+grp = greenrecipe_total.greenrecipe()
 
-@app.route('/get_co2_emissions', methods=['GET']) 
+@app.route('/recipeCO2', methods=['GET']) 
 def get_co2_emissions():
-    url = request.args.get('url')
-    result = greenrecipe.get_co2_emissions(url)
+    recipe = request.args.get('recipe')
+    result = grp.get_co2_emissions(recipe)
     return '{}'.format(result)
 
 if __name__ == '__main__':

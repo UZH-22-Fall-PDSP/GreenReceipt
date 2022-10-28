@@ -6,12 +6,11 @@ def urlValidCheck(input:str):
     # # INPUT(string) : Recipe URL from food.com
     # # OUTPUT(Constructor | BeautifulSoup) : BeautifulSoup constructor of Recipe URL html
 
-    EXPECTED_RECIPE_PAGE = 'food.com/recipe/'
-
-    input.index(EXPECTED_RECIPE_PAGE)
-
-    input = input.split('?')[0]
-    url = input + '?units=metric&scale=1'
+    # EXPECTED_RECIPE_PAGE = 'food.com/recipe/'
+    # input.index(EXPECTED_RECIPE_PAGE)
+    # input = input.split('?')[0]
+    
+    url = 'https://www.food.com/recipe/' + input + '?units=metric&scale=1'
 
     r = requests.get(url)
     html_doc = r.text
@@ -19,15 +18,15 @@ def urlValidCheck(input:str):
 
     return soup
 
-def recipeIngredient(soup:BeautifulSoup):
+def recipeIngrd(soup:BeautifulSoup):
     # # INPUT(Constructor | BeautifulSoup) : BeautifulSoup constructor of Recipe URL html
     # # OUTPUT(tuple | string, List of dictionary) : Recipe Title and Ingredients List
 
     recipeTitle = soup.title.text.split(' - Food.com')[0]
-    ingrdList = findIngredient(soup)
+    ingrdList = findIngrd(soup)
     return recipeTitle, ingrdList
 
-def findIngredient(soup:BeautifulSoup):
+def findIngrd(soup:BeautifulSoup):
     # # INPUT(Constructor | BeautifulSoup) : BeautifulSoup constructor of Recipe URL html
     # # OUTPUT(List of dictionary) : Ingredient Information List
     # #                              {'ingredient' : string, 'quantity' : float, 'unit' : string}
@@ -35,8 +34,9 @@ def findIngredient(soup:BeautifulSoup):
     ingrdList = []
 
     ultag = soup.find('ul', {'class': re.compile('^ingredient-list')})
-
+    i = 0
     for litag in ultag.find_all('li'):
+        # print(f"{i+1}/{len(ultag.find_all('li'))+1}")
         quant_obj = litag.find('span', {'class': re.compile('quantity')})
         ingrd_obj = litag.find('span', {'class': re.compile('text')})
 
@@ -59,14 +59,16 @@ def findIngredient(soup:BeautifulSoup):
                     sub_html_doc = sub_r.text
                     sub_soup = BeautifulSoup(sub_html_doc, features="html.parser")
                     ingrd = sub_soup.find('h1').text
-                    
-                    ingrdList.append({'ingredient' : ingrd, 'quantity' : q, 'unit' : u})
+
+                    ingrdList.append({'ingredient' : ingrd.lower(), 'quantity' : q, 'unit' : u})
                 else:
                     True
                     # TODO Recursive Call of Scraping Recipe Page. Skip now.
             else:
+                # TODO case for the ingredient doesn't have a url link
                 True
         else:
             True
+        i+=1
 
     return ingrdList
