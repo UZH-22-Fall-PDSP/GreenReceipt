@@ -7,7 +7,7 @@ grp = greenrecipe_total.greenrecipe()
 @app.route('/recipeCO2', methods=['GET']) 
 def get_co2_emissions():
     recipe = request.args.get('recipe')
-    result = grp.get_co2_emissions(recipe)
+    result = grp.get_co2_emissions(recipe, verbose = False) 
     return '{}'.format(result)
 
 if __name__ == '__main__':

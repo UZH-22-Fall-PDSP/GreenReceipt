@@ -10,7 +10,13 @@ def requestRecipeUrl(input:str):
     # input.index(EXPECTED_RECIPE_PAGE)
     # input = input.split('?')[0]
     
-    url = 'https://www.food.com/recipe/' + input + '?units=metric&scale=1'
+    """
+    SWEET AND SPICY VEGETARIAN CHILI
+    If scale is 0, there exist 0 quantity ingredients
+    Solution : search with scale 10 and divide each quantity by 10 later
+    """
+    url = 'https://www.food.com/recipe/' + input + '?units=metric&scale=10'
+    
 
     r = requests.get(url)
     html_doc = r.text
@@ -36,13 +42,14 @@ def findIngrd(soup:BeautifulSoup):
     ultag = soup.find('ul', {'class': re.compile('^ingredient-list')})
     i = 0
     for litag in ultag.find_all('li'):
-        # print(f"{i+1}/{len(ultag.find_all('li'))+1}")
+        # print(f"{i+1}/{len(ultag.find_all('li'))}")
         quant_obj = litag.find('span', {'class': re.compile('quantity')})
         ingrd_obj = litag.find('span', {'class': re.compile('text')})
 
         # CHECK : the item of list is the information of an ingredient.
         if (quant_obj != None) and (ingrd_obj != None):
-            q = float(quant_obj.text)
+            q_str = quant_obj.text
+            q = float(q_str)/10 if q_str != '' else float(0) # scale down from 10 to 1
 
             # ASSUME : If there is no unit, the unit as 'ea'
             _u = ingrd_obj.text.split()[0]

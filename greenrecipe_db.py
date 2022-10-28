@@ -51,6 +51,15 @@ class greenrecipe_db():
             ingrdList_co2.append({'ingredient' : ingrd_name, 'co2' : co2})
 
         return total_co2, ingrdList_co2
+    
+    def get_ingrd_list(self):
+        rs = self.ref_db_con.execute('SELECT distinct(ingredient) FROM emissions')
+
+        ingrd_db = []
+        for r in rs:
+          ingrd_db.append(r[0])
+
+        return ingrd_db
 
     def update_user_request(ingrd):
         # Input : {"name" : <str: receipt name>, "emissions" : <int: CO2 emissions>, "url" : <str: link>}
