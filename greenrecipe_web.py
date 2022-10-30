@@ -24,13 +24,17 @@ def requestRecipeUrl(input:str):
 
     return soup
 
+def parseRecipeName(soup:BeautifulSoup):
+    # # INPUT(Constructor | BeautifulSoup) : BeautifulSoup constructor of Recipe URL html
+    # # OUTPUT(tuple | string, List of dictionary) : Recipe Name
+    recipeTitle = soup.title.text.split(' - Food.com')[0]
+    return recipeTitle
+
 def parseRecipeIngrd(soup:BeautifulSoup):
     # # INPUT(Constructor | BeautifulSoup) : BeautifulSoup constructor of Recipe URL html
-    # # OUTPUT(tuple | string, List of dictionary) : Recipe Title and Ingredients List
-
-    recipeTitle = soup.title.text.split(' - Food.com')[0]
+    # # OUTPUT(List of dictionary) : Ingredients List
     ingrdList = findIngrd(soup)
-    return recipeTitle, ingrdList
+    return ingrdList
 
 def findIngrd(soup:BeautifulSoup):
     # # INPUT(Constructor | BeautifulSoup) : BeautifulSoup constructor of Recipe URL html
@@ -48,7 +52,8 @@ def findIngrd(soup:BeautifulSoup):
 
         # CHECK : the item of list is the information of an ingredient.
         if (quant_obj != None) and (ingrd_obj != None):
-            q_str = quant_obj.text
+            q_str = quant_obj.text.split('-')
+            q_str = q_str[0] # [CornerCase] e.g. 10-13
             q = float(q_str)/10 if q_str != '' else float(0) # scale down from 10 to 1
 
             # ASSUME : If there is no unit, the unit as 'ea'

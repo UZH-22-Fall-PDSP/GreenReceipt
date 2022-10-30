@@ -1,19 +1,38 @@
-import psycopg2
-import sqlalchemy
-from sqlalchemy import select
-
-from sqlalchemy.sql import text
+import json
+from numpy import True_
 import pandas as pd
 
+import sqlalchemy
+from sqlalchemy import select
+from sqlalchemy import Table
+from sqlalchemy.orm import Session
+from sqlalchemy.orm import declarative_base
 
 
 """
-[INSERT]
-synonyms_en (ingrd, searchedingred1)
+CREATE TABLE userhistory(
+	id serial PRIMARY KEY,
+	ts TIMESTAMPTZ NOT NULL DEFAULT NOW(),
+	recipeName VARCHAR,
+	totalco2 NUMERIC(7,2),
+	ingrdlist VARCHAR
+)
+
+CREATE TABLE nlpsimresult(
+	ingrd VARCHAR PRIMARY KEY,
+	result1 VARCHAR,
+	result1num NUMERIC(10,9),
+	result2 VARCHAR,
+	result2num NUMERIC(10,9),
+	result3 VARCHAR,
+	result3num NUMERIC(10,9)
+)
 """
 
 CO2_REF_DB = 'postgresql://readonly:!JjFlGMjREf53965EvE@35.228.50.60:5432/postgres'
-CO2_GCP_DB = None
+CO2_GCP_DB = 'postgresql://postgres:postgres@34.163.206.28:5432/postgres'
+
+Base = declarative_base()
 
 class greenrecipe_db():
 
@@ -28,8 +47,10 @@ class greenrecipe_db():
                     'emissions'],
         )
 
-        self.gcp_db_engine = self.ref_db_engine
-        self.gcp_db_con = self.ref_db_engine.connect()
+        self.gcp_db_engine = sqlalchemy.create_engine(CO2_GCP_DB)
+        self.gcp_db_con = self.gcp_db_engine.connect()
+        self.Userhistory = Table('userhistory', Base.metadata, autoload=True, autoload_with=self.gcp_db_engine)
+        self.Nlpsimresult = Table('nlpsimresult', Base.metadata, autoload=True, autoload_with=self.gcp_db_engine)
 
     def search_ingrdCO2_total(self, ingrdList):
         # # INPUT(List of dictionary) : Ingredient Information List
@@ -61,9 +82,20 @@ class greenrecipe_db():
         #                   Total CO2 (str), 
         #                   Ingredient CO2 Information List
         #                   { "ingredient" : <str: Ingredient name>, "co2" : <float: CO2 emission> }
-        engine = self.gcp_db_engine
-        session = Session(engine)
-        return True
+        r = recipeName
+        isExist = False
+        total_co2 = 0
+        ingrdList_co2 = []
+
+        table = self.Userhistory
+        with Session(self.gcp_db_engine) as session:
+            select_stmt = table.select().with_only_columns([table.c.recipename, table.c.totalco2, table.c.ingrdlist]).where(table.c.recipename == r)
+            result = session.execute(select_stmt).first()
+            if result != None:
+                isExist = True
+                total_co2 = result['totalco2']
+                ingrdList_co2 = result['ingrdlist']
+        return isExist, total_co2, ingrdList_co2
 
     def get_ingrd_list(self):
         rs = self.ref_db_con.execute('SELECT distinct(ingredient) FROM emissions')
@@ -79,21 +111,35 @@ class greenrecipe_db():
         #           Total CO2, 
         #           Ingredient CO2 Information List
         #           { "ingredient" : <str: Ingredient name>, "co2" : <float: CO2 emission> }
+        r = recipeName
+        t = total_co2
+        ingrds = json.dumps(ingrdList_co2)
 
-        return 
+        table = self.Userhistory
+        with Session(self.gcp_db_engine) as session:
+            insert_stmnt = table.insert().values(recipename=r
+                                                ,totalco2=t
+                                                ,ingrdlist=ingrds)
+            session.execute(insert_stmnt)
+            session.commit()
+
+        return True
     
     def update_nlpsimresult(self, update_history):
-        # # Input : recipeName (str),
-        #           Total CO2, 
-        #           Ingredient CO2 Information List
-        #           { "ingredient" : <str: Ingredient name>, "co2" : <float: CO2 emission> }
+        # # Input : {'ingrd': orig_ingrd_name,
+        #            'result':[(rank1_name, rank1_sim), (rank2_name, rank2_sim), (rank3_name, rank3_sim)]}
 
-        for update in update_history:
-            orig = update['orig']
-            new = update['new']
-            ins = users.insert().values(name="jack", fullname="Jack Jones")
+        table = self.Nlpsimresult
+        with Session(self.gcp_db_engine) as session:
+            for u in update_history:
+                insert_stmnt = table.insert().values(ingrd=u['ingrd']
+                                                    ,result1=u['result'][0][0]
+                                                    ,result1num=u['result'][0][1]
+                                                    ,result2=u['result'][1][0]
+                                                    ,result2num=u['result'][1][1]
+                                                    ,result3=u['result'][2][0]
+                                                    ,result3num=u['result'][2][1])
+                session.execute(insert_stmnt) 
+            session.commit()
 
-        conn = self.gcp_db_con
-        conn.execute(ins)
-        return
-
+        return True
