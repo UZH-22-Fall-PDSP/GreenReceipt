@@ -27,6 +27,14 @@ class greenrecipe_nlp():
       orig_ingrd_name = ing['ingredient']
 
       ing_vec = self.ft.get_word_vector(orig_ingrd_name)
+      """
+      TODO Change the update_history componenets
+            {original ingredient name, new ingredient name}
+            -> {'ingrd': orig_ingrd_name ,
+              'result':[(rank1_name, rank1_sim)
+                      , (rank2_name, rank2_sim)
+                      , (rank3_name, rank3_sim)]}
+      """
       res = []
 
       for j, ing in enumerate(self.ingrd_db_wv):
@@ -38,6 +46,11 @@ class greenrecipe_nlp():
       if orig_ingrd_name != new_ingrd_name:
         ingredList[i]['ingredient']= new_ingrd_name
         update_history.append({'orig': orig_ingrd_name, 'new': new_ingrd_name})
+
+        # update_history.append(
+        # {'ingrd': orig_ingrd_name ,
+        #  'result':[(rank1_name, rank1_sim), (rank2_name, rank2_sim), (rank3_name, rank3_sim)]}
+        # )
 
     return  ingredList, update_history
     
