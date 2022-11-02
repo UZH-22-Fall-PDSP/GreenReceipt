@@ -1,46 +1,49 @@
-import greenrecipe_web as web
 
-import sqlalchemy as db
 from scipy.spatial import distance
-
+import gensim.downloader
 import fasttext
+
+import greenrecipe_web as web
 
 
 class greenrecipe_nlp():
   def __init__(self, ingrd_list):
 
-    self.ft = fasttext.load_model('../model/cc.en.300.bin')
+    self.ft = gensim.downloader.load('fasttext-wiki-news-subwords-300')
     self.ingrd_list = ingrd_list
     self.ingrd_db_wv = []
 
     for ingrd in ingrd_list:
-      self.ingrd_db_wv.append(self.ft.get_word_vector(ingrd))
+      self.ingrd_db_wv.append(self.ft.get_verctor(ingrd))
   
 
   def find_similar_ing(self, ingredList):
 
     update_history = []
     for i, ing in enumerate(ingredList):
+
       orig_ingrd_name = ing['ingredient']
-      ing_vec = self.ft.get_word_vector(orig_ingrd_name)   
+
+      ing_vec = self.ft.get_vector(orig_ingrd_name)
+     
       res = []
 
-      for j, ing in enumerate(ing_db_wv):
-        cos_sim = distance.cosine(ing_vec, ing)
+      for j, ing in enumerate(self.ingrd_db_wv):
+        cos_sim = 1-distance.cosine(ing_vec, ing)
         res.append(cos_sim)
 
-      res.sort()
-      ingredList[i]['ingredient']= self.ingrd_list[res.index(res[0])]
-      update_history.append({'ingrd': orig_ingrd_name, 
-                             'res': [(self.ingrd_list[res.index(res[0])],res[0]),(self.ingrd_list[res.index(res[1])],res[1]),(self.ingrd_list[res.index(res[2])],res[2])]})
+      new_ingrd_name = self.ingrd_list[res.index(max(res))]
 
-      """
-      update_history = 
-                       {'ingrd': orig_ingrd_name ,
-                        'result':[(rank1_name, rank1_sim)
-                                , (rank2_name, rank2_sim)
-                                , (rank3_name, rank3_sim)]}
-      """
+      if orig_ingrd_name != new_ingrd_name:
+        ingredList[i]['ingredient']= new_ingrd_name
+        update_history.append({'orig': orig_ingrd_name, 'new': new_ingrd_name})
+
+
+        # update_history.append(
+        # {'ingrd': orig_ingrd_name ,
+        #  'result':[(rank1_name, rank1_sim), (rank2_name, rank2_sim), (rank3_name, rank3_sim)]}
+        # )
+
     return  ingredList, update_history
     
 
