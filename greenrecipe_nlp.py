@@ -25,7 +25,7 @@ class greenrecipe_nlp():
       ing_vec = self.ft.get_word_vector(orig_ingrd_name)   
       res = []
 
-      for j, ing in enumerate(ing_db_wv):
+      for j, ing in enumerate(self.ing_db_wv):
         cos_sim = distance.cosine(ing_vec, ing)
         res.append(cos_sim)
 
