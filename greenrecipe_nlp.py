@@ -9,7 +9,7 @@ import fasttext
 class greenrecipe_nlp():
   def __init__(self, ingrd_list):
 
-    self.ft = fasttext.load_model('../model/cc.en.300.bin')
+    self.ft = fasttext.load_model('../model/fastText/cc.en.300.bin')
     self.ingrd_list = ingrd_list
     self.ingrd_db_wv = []
 
