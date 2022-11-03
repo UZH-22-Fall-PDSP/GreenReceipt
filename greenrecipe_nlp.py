@@ -11,37 +11,32 @@ class greenrecipe_nlp():
 
     self.ft = fasttext.load_model('../model/fastText/cc.en.300.bin')
     self.ingrd_list = ingrd_list
-    self.ingrd_db_wv = []
+    self.ingrd_db_wvs = []
+    self.update_history = []
 
     for ingrd in ingrd_list:
-      self.ingrd_db_wv.append(self.ft.get_word_vector(ingrd))
-  
+      self.ingrd_db_wvs.append(self.ft.get_word_vector(ingrd))
 
   def find_similar_ing(self, ingredList):
 
-    update_history = []
-    for i, ing in enumerate(ingredList):
-      orig_ingrd_name = ing['ingredient']
-      ing_vec = self.ft.get_word_vector(orig_ingrd_name)   
-      res = []
+    for ing_org in ingredList:
+      distances = []
+      ing_org_vec = self.ft.get_word_vector(ing_org['ingredient'])   
 
-      for j, ing in enumerate(self.ingrd_db_wv):
-        cos_sim = distance.cosine(ing_vec, ing)
-        res.append(cos_sim)
+      for ing_db_vec in self.ingrd_db_wvs:
+        cos_sim = distance.cosine(ing_org_vec, ing_dd_vec)
+        distances.append(cos_sim)
 
-      res.sort()
-      ingredList[i]['ingredient']= self.ingrd_list[res.index(res[0])]
-      update_history.append({'ingrd': orig_ingrd_name, 
-                             'res': [(self.ingrd_list[res.index(res[0])],res[0]),(self.ingrd_list[res.index(res[1])],res[1]),(self.ingrd_list[res.index(res[2])],res[2])]})
+      distances.sort()
+      ingredList[i]['ingredient']= self.ingrd_list[distances.index(distances[0])]
+      self.update_history.append({'ingrd': ing_org['ingredient'], 
+                                  'res': [(self.ingrd_list[distances.index(distances[0])],distances[0]),
+                                          (self.ingrd_list[distances.index(distances[1])],distances[1]),
+                                          (self.ingrd_list[distances.index(distances[2])],distances[2])]})
 
-      """
-      update_history = 
-                       {'ingrd': orig_ingrd_name ,
-                        'result':[(rank1_name, rank1_sim)
-                                , (rank2_name, rank2_sim)
-                                , (rank3_name, rank3_sim)]}
-      """
-    return  ingredList, update_history
+      top3 = self.update_history
+      
+    return  ingredList, top3
     
 
 

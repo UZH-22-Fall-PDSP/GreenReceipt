@@ -12,9 +12,9 @@ import json
 
 gr = total.greenrecipe()
 
-# input = 'https://www.food.com/recipe/creamy-cajun-chicken-pasta-39087'
-input = 'creamy-cajun-chicken-pasta-39087'
-# input = 'sweet-and-spicy-vegetarian-chili-97649'
+
+#input = 'creamy-cajun-chicken-pasta-39087'
+input = 'sweet-and-spicy-vegetarian-chili-97649'
 
 result = gr.get_co2_emissions(input, True)
 print('\n\n\n',result)
