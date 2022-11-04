@@ -27,7 +27,6 @@ class greenrecipe():
         if isExist:
             # In case the total_co2 of this recipe was calculated before.
             if verbose: print("----------------------------------------\n## Recipe already in userhistory DB ....")
-            total_co2 = float(total_co2)
         else:
             # In case the total_co2 of this recipe is new.
             if verbose: print("## Scraping recipe ingredients ....")
@@ -37,9 +36,9 @@ class greenrecipe():
 
             """
             TODO Temporary Dataset for update_history
+            # ingrd = ''.join(random.choices(string.ascii_uppercase + string.digits, k=5))
+            # update_history = [{'ingrd':ingrd,'result':[('A',0.01),('B',0.01),('C',0.01)]}]
             """
-            ingrd = ''.join(random.choices(string.ascii_uppercase + string.digits, k=5))
-            update_history = [{'ingrd':ingrd,'result':[('A',0.01),('B',0.01),('C',0.01)]}]
 
             if verbose: print(f"{update_history}\n## Update nlpsimresult DB ....")
             self.grp_db.update_nlpsimresult(update_history)

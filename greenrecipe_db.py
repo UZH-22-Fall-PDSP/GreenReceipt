@@ -7,6 +7,7 @@ from sqlalchemy import select
 from sqlalchemy import Table
 from sqlalchemy.orm import Session
 from sqlalchemy.orm import declarative_base
+from sqlalchemy.dialects.postgresql import insert
 
 
 """
@@ -31,6 +32,7 @@ CREATE TABLE nlpsimresult(
 
 CO2_REF_DB = 'postgresql://readonly:!JjFlGMjREf53965EvE@35.228.50.60:5432/postgres'
 CO2_GCP_DB = 'postgresql://postgres:postgres@34.163.206.28:5432/postgres'
+TEST_DB = 'postgresql://postgres:postgres@localhost:5432/postgres'
 
 Base = declarative_base()
 
@@ -47,8 +49,9 @@ class greenrecipe_db():
                     'emissions'],
         )
 
-        self.gcp_db_engine = sqlalchemy.create_engine(CO2_GCP_DB)
+        self.gcp_db_engine = sqlalchemy.create_engine(TEST_DB)
         self.gcp_db_con = self.gcp_db_engine.connect()
+        
         self.Userhistory = Table('userhistory', Base.metadata, autoload=True, autoload_with=self.gcp_db_engine)
         self.Nlpsimresult = Table('nlpsimresult', Base.metadata, autoload=True, autoload_with=self.gcp_db_engine)
 
@@ -93,8 +96,8 @@ class greenrecipe_db():
             result = session.execute(select_stmt).first()
             if result != None:
                 isExist = True
-                total_co2 = result['totalco2']
-                ingrdList_co2 = result['ingrdlist']
+                total_co2 = float(result['totalco2'])
+                ingrdList_co2 = json.loads(result['ingrdlist'])
         return isExist, total_co2, ingrdList_co2
 
     def get_ingrd_list(self):
@@ -117,10 +120,10 @@ class greenrecipe_db():
 
         table = self.Userhistory
         with Session(self.gcp_db_engine) as session:
-            insert_stmnt = table.insert().values(recipename=r
+            insert_stmt = insert(table).values(recipename=r
                                                 ,totalco2=t
                                                 ,ingrdlist=ingrds)
-            session.execute(insert_stmnt)
+            session.execute(insert_stmt)
             session.commit()
 
         return True
@@ -132,14 +135,16 @@ class greenrecipe_db():
         table = self.Nlpsimresult
         with Session(self.gcp_db_engine) as session:
             for u in update_history:
-                insert_stmnt = table.insert().values(ingrd=u['ingrd']
-                                                    ,result1=u['result'][0][0]
-                                                    ,result1num=u['result'][0][1]
-                                                    ,result2=u['result'][1][0]
-                                                    ,result2num=u['result'][1][1]
-                                                    ,result3=u['result'][2][0]
-                                                    ,result3num=u['result'][2][1])
-                session.execute(insert_stmnt) 
+                insert_stmt = insert(table).values(ingrd=u['ingrd']
+                                                    ,result1=u['res'][0][0]
+                                                    ,result1num=u['res'][0][1]
+                                                    ,result2=u['res'][1][0]
+                                                    ,result2num=u['res'][1][1]
+                                                    ,result3=u['res'][2][0]
+                                                    ,result3num=u['res'][2][1])
+                do_nothing_stmt = insert_stmt.on_conflict_do_nothing(index_elements=['ingrd'])
+                session.execute(do_nothing_stmt)
+
             session.commit()
 
         return True
