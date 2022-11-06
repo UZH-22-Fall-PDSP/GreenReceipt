@@ -2,6 +2,13 @@ import re
 import requests
 from bs4 import BeautifulSoup
 
+"""
+TODO User default link without any parameter -> Get the serve value 'x' (class: adjust svelte-1o10zxc) -> User default link + ?units=metric&scale=x
+            (Simple but time consuming for double scrapping)
+TODO Coner case for scale 1/4
+TODO Scrap non-url ingredient by using textblob
+"""
+
 def requestRecipeUrl(input:str):
     # # INPUT(string) : Recipe name from food.com
     # # OUTPUT(Constructor | BeautifulSoup) : BeautifulSoup constructor of Recipe URL html
@@ -10,14 +17,8 @@ def requestRecipeUrl(input:str):
     # input.index(EXPECTED_RECIPE_PAGE)
     # input = input.split('?')[0]
     
-    """
-    SWEET AND SPICY VEGETARIAN CHILI
-    If scale is 0, there exist 0 quantity ingredients
-    Solution : search with scale 10 and divide each quantity by 10 later
-    """
     url = 'https://www.food.com/recipe/' + input + '?units=metric&scale=10'
     
-
     r = requests.get(url)
     html_doc = r.text
     soup = BeautifulSoup(html_doc, features="html.parser")
