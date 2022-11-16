@@ -9,26 +9,12 @@ from sqlalchemy.orm import Session
 from sqlalchemy.orm import declarative_base
 from sqlalchemy.dialects.postgresql import insert
 
+import random
+import string
 
-"""
-CREATE TABLE userhistory(
-	id serial PRIMARY KEY,
-	ts TIMESTAMPTZ NOT NULL DEFAULT NOW(),
-	recipeName VARCHAR,
-	totalco2 NUMERIC(7,2),
-	ingrdlist VARCHAR
-)
+def id_generator(size=6, chars=string.ascii_uppercase + string.digits):
+    return ''.join(random.choice(chars) for _ in range(size))
 
-CREATE TABLE nlpsimresult(
-	ingrd VARCHAR PRIMARY KEY,
-	result1 VARCHAR,
-	result1num NUMERIC(10,9),
-	result2 VARCHAR,
-	result2num NUMERIC(10,9),
-	result3 VARCHAR,
-	result3num NUMERIC(10,9)
-)
-"""
 
 CO2_REF_DB = 'postgresql://readonly:!JjFlGMjREf53965EvE@35.228.50.60:5432/postgres'
 CO2_GCP_DB = 'postgresql://postgres:postgres@34.163.206.28:5432/postgres'
@@ -40,13 +26,14 @@ class greenrecipe_db():
 
     def __init__(self):
 
-        self.ref_db_engine = sqlalchemy.create_engine(CO2_REF_DB)
+        self.ref_db_engine = sqlalchemy.create_engine(TEST_DB)
         self.ref_db_con = self.ref_db_engine.connect()
         self.ref_db_emissions_df = pd.read_sql_table(
             "emissions",
             con=self.ref_db_engine,
             columns=['ingredient',
-                    'emissions'],
+                    'emissions',
+                    'category'],
         )
 
         self.gcp_db_engine = sqlalchemy.create_engine(TEST_DB)
@@ -55,12 +42,16 @@ class greenrecipe_db():
         self.Userhistory = Table('userhistory', Base.metadata, autoload=True, autoload_with=self.gcp_db_engine)
         self.Nlpsimresult = Table('nlpsimresult', Base.metadata, autoload=True, autoload_with=self.gcp_db_engine)
 
-    def search_ingrdCO2_total(self, ingrdList):
+    def search_ingrdCO2_total(self, ingrdList, verbose):
         # # INPUT(List of dictionary) : Ingredient Information List
         # #                              {'ingredient' : string, 'quantity' : float, 'unit' : string}
         # # OUTPUT(Tuple) : Total CO2, 
         #                   Ingredient CO2 Information List
         #                   { "ingredient" : <str: Ingredient name>, "co2" : <float: CO2 emission> }
+
+        ea_CONSTANT = 500 # 1ea = 500g
+        ml_to_g_CONSTANT = 1 # 1ml = 1g
+        kg_to_g_CONSTANT = 1000 # 1kg = 1000g
 
         ingrdList_co2 = []
         total_co2 = 0
@@ -68,18 +59,34 @@ class greenrecipe_db():
 
             ingrd_name = ingrd['ingredient']
 
-            # TODO [CORNER CASE] handle the case that many items with the same ingredient name e.g. 'corn'
+            # NOTE [CORNER CASE] handle the case that many items with the same ingredient name e.g. 'corn'
             # For now, just return the top value
+
             emissions_df = self.ref_db_emissions_df
             ingrd_co2 = emissions_df[emissions_df.ingredient == ingrd_name]['emissions'].values[0]
 
-            co2 = round(ingrd['quantity'] * ingrd_co2, 2)
-            total_co2 = round(total_co2,2) + co2
+            unit = ingrd['unit']
+            if (unit == 'ml'):
+                q = ingrd['quantity'] * ml_to_g_CONSTANT / kg_to_g_CONSTANT
+                co2 = round(q * ingrd_co2, 7)
+            elif (unit == 'g'):
+                q = ingrd['quantity'] / kg_to_g_CONSTANT
+                co2 = round(q * ingrd_co2, 7)
+            elif (unit == 'ea'):
+                q = ingrd['quantity'] * ea_CONSTANT / kg_to_g_CONSTANT
+                co2 = round(q * ingrd_co2, 7)
+            else: # kg or others
+                q = ingrd['quantity']
+                co2 = round(q * ingrd_co2, 7)
+
+            total_co2 = round(total_co2,7) + co2
             ingrdList_co2.append({'ingredient' : ingrd_name, 'co2' : co2})
+
+        if verbose: print(f"DONE - search ingredients in DB and calculate total co2")
 
         return total_co2, ingrdList_co2
     
-    def search_recipe_in_db(self, recipeName):
+    def search_recipe_in_db(self, recipeName, verbose = False):
         # # Input : recipeName (str)
         # # OUTPUT(Tuple) : isExist (bool),
         #                   Total CO2 (str), 
@@ -98,6 +105,9 @@ class greenrecipe_db():
                 isExist = True
                 total_co2 = float(result['totalco2'])
                 ingrdList_co2 = json.loads(result['ingrdlist'])
+        
+        if verbose: print(f"Done - {isExist}")
+
         return isExist, total_co2, ingrdList_co2
 
     def get_ingrd_list(self):
@@ -109,7 +119,25 @@ class greenrecipe_db():
 
         return ingrd_db
 
-    def update_userhistory(self, recipeName, total_co2, ingrdList_co2):
+    def get_cat_ingrd_list(self, category, verbose = False):
+        # TODO: Tasks pending completion -@hyeongkyunkim at 11/15/2022, 1:15:53 PM
+        # Get ingredient list of the category
+        # dummy_name = category + id_generator(size = 3)
+        # dummy_number = round(random.random(),7)
+
+        cat = category
+
+        emissions_df = self.ref_db_emissions_df
+        cat_ingrd_co2 = emissions_df[emissions_df.category == cat][['ingredient','emissions']]
+        cat_ingrd_co2_list = []
+        for i, ingrd in cat_ingrd_co2.iterrows():
+            _ = {'ingredient': ingrd['ingredient'],'co2': ingrd['emissions']}
+            cat_ingrd_co2_list.append(_)
+
+        if verbose: print(f"Done - search ingredients of {category} Total {len(cat_ingrd_co2_list)} ea")
+        return cat_ingrd_co2_list
+
+    def update_userhistory(self, recipeName, total_co2, ingrdList_co2, verbose = False):
         # # Input : recipeName (str),
         #           Total CO2, 
         #           Ingredient CO2 Information List
@@ -126,12 +154,13 @@ class greenrecipe_db():
             session.execute(insert_stmt)
             session.commit()
 
+        if verbose: print("DONE - update userhistory DB")
+
         return True
     
-    def update_nlpsimresult(self, update_history):
+    def update_nlpsimresult(self, update_history, verbose = False):
         # # Input : {'ingrd': orig_ingrd_name,
         #            'result':[(rank1_name, rank1_sim), (rank2_name, rank2_sim), (rank3_name, rank3_sim)]}
-
         table = self.Nlpsimresult
         with Session(self.gcp_db_engine) as session:
             for u in update_history:
@@ -147,4 +176,7 @@ class greenrecipe_db():
 
             session.commit()
 
+        if verbose: print("DONE - update nlpsimresult DB")
         return True
+
+

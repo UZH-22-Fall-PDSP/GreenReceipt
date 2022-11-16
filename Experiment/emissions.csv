@@ -1,0 +1,496 @@
+"ingredient","variety","certification","emissions"
+"mushrooms","canned","conventional",2.55
+"corn","canned","conventional",1.2
+"tomato","canned","conventional",1.87
+"beans","canned","conventional",1.21
+"peas","canned","conventional",1.24
+"chickpeas","canned","conventional",1.25
+"lentils","canned","conventional",1.46
+"pineapple","canned","conventional",1.71
+"apricot","canned","conventional",1.7
+"peach","canned","conventional",1.52
+"basil","dried","conventional",3.124
+"rosemary","dried","conventional",0.532
+"thyme","dried","conventional",2.812
+"dates","dried","organic",4.22
+"tea","dried","conventional",5.06
+"oregano","dried","conventional",2.362
+"lentils","dried","conventional",0.61
+"dates","dried","conventional",3.01
+"spices","fresh","conventional",0.652
+"basil","fresh","conventional",0.272
+"oregano","fresh","conventional",0.572
+"beetroot","fresh","conventional",0.32
+"dates","fresh","organic",3.56
+"crab","frozen","conventional",12.59
+"crayfish","frozen","conventional",12.59
+"langostino","frozen","conventional",12.59
+"prawns","frozen","conventional",12.59
+"scampi","frozen","conventional",12.59
+"shrimps","frozen","conventional",12.59
+"brussel sprouts","frozen","conventional",0.59
+"strawberries","frozen","conventional",0.71
+"blueberries","frozen","conventional",0.64
+"raspberries","frozen","conventional",0.66
+"french fries","frozen","conventional",0.7
+"beetroot","glass","conventional",1.36
+"red cabbage","glass","conventional",0.96
+"kale","glass","conventional",0.8
+"black-eyed beans","fresh","conventional",0.403
+"plum","fresh","conventional",0.22
+"burger bun","fresh","conventional",0.61
+"anise","fresh","conventional",4.526
+"baking powder","fresh","conventional",1.504
+"baking soda","fresh","conventional",1.249
+"lemon balm","fresh","conventional",0.602
+"balsamic vinegar","fresh","conventional",1.474
+"bbq sauce","fresh","conventional",0.983
+"bay leaves","fresh","conventional",0.602
+"cardamom","fresh","conventional",0.652
+"chervil","fresh","conventional",0.356
+"chia seeds","fresh","conventional",0.92
+"chili","fresh","conventional",0.681
+"cinnamon","fresh","conventional",0.643
+"clove","fresh","conventional",0.492
+"cilantro","fresh","conventional",0.656
+"cumin","fresh","conventional",0.652
+"turmeric","fresh","conventional",0.652
+"curry","fresh","conventional",0.652
+"dill","fresh","conventional",0.682
+"fish sauce","fresh","conventional",2.388
+"gelatin","fresh","conventional",0.652
+"ginger","fresh","conventional",1.226
+"herbs","fresh","conventional",0.652
+"ketchup","fresh","conventional",1.352
+"lemon grass","fresh","conventional",4.562
+"macadamia nuts","fresh","conventional",2.678
+"marjoram","fresh","conventional",0.602
+"mayonnaise","fresh","conventional",1.914
+"caraway","fresh","conventional",0.642
+"mustard","fresh","conventional",1.108
+"mustard seeds","fresh","conventional",4.784
+"mustard leaves","fresh","conventional",4.784
+"nutmeg","fresh","conventional",0.367
+"sesame oil","fresh","conventional",3.019
+"onion powder","fresh","conventional",4.072
+"paprika","fresh","conventional",4.274
+"parsley","fresh","conventional",0.682
+"pecans","fresh","conventional",2.678
+"pepper","fresh","conventional",5.314
+"pine nuts","fresh","conventional",2.518
+"poppy seed","fresh","conventional",0.92
+"saffron","fresh","conventional",0.692
+"sage","fresh","conventional",0.682
+"salt","fresh","conventional",0.584
+"sea salt","fresh","conventional",0.384
+"sesame","fresh","conventional",2.612
+"soy sauce","fresh","conventional",1.344
+"agave syrup","fresh","conventional",0.969
+"tabasco sauce","fresh","conventional",4.274
+"tarragon","fresh","conventional",0.602
+"tomatoes paste","fresh","conventional",1.732
+"vanilin","fresh","conventional",2.267
+"vanilla extract","fresh","conventional",13.827
+"apple vinegar","fresh","conventional",3.284
+"white wine vinegar","fresh","conventional",1.474
+"wasabi","fresh","conventional",0.835
+"yeast extract","fresh","conventional",2.194
+"yeast","fresh","conventional",0.754
+"beer","fresh","conventional",0.77
+"brandy","fresh","conventional",2.07
+"cognac","fresh","conventional",2.07
+"liquor","fresh","conventional",2.07
+"tawny port","fresh","conventional",2.38
+"red wine","fresh","conventional",2.16
+"white wine","fresh","conventional",2.16
+"wine","fresh","conventional",2.16
+"half-fat margarine","fresh","conventional",1.15
+"extravirgin olive oil","fresh","conventional",3.06
+"olive oil","fresh","conventional",3.06
+"sunflower oil","fresh","conventional",2.24
+"vegan spreadable fat","fresh","conventional",1.67
+"full-fat margarine","fresh","conventional",1.78
+"clams","fresh","conventional",6.29
+"cockles","fresh","conventional",6.29
+"mussels","fresh","conventional",6.29
+"oysters","fresh","conventional",6.29
+"scallops","fresh","conventional",6.29
+"egg","fresh","conventional",2.04
+"sausage","fresh","conventional",3.62
+"hot dog","fresh","conventional",3.77
+"mushrooms","fresh","conventional",1.31
+"morel mushrooms","fresh","conventional",1.31
+"porcini mushrooms","fresh","conventional",1.31
+"portobello mushrooms","fresh","conventional",1.31
+"shiitake mushrooms","fresh","conventional",1.31
+"wild mushrooms","fresh","conventional",1.31
+"lamb's lettuce","fresh","conventional",0.27
+"collard green","fresh","conventional",0.35
+"kale","fresh","conventional",0.35
+"cherry tomatoes","fresh","conventional",0.91
+"kohlrabi","fresh","conventional",0.43
+"acorn squash","fresh","conventional",0.21
+"banana squash","fresh","conventional",0.21
+"butternut squash","fresh","conventional",0.21
+"delicata squash","fresh","conventional",0.21
+"gem squash","fresh","conventional",0.21
+"hubbard squash","fresh","conventional",0.21
+"pumpkin","fresh","conventional",0.21
+"spaghetti squash","fresh","conventional",0.21
+"chives","fresh","conventional",0.21
+"leek","fresh","conventional",0.21
+"brussel sprouts","fresh","conventional",0.28
+"arugula","fresh","conventional",0.27
+"mixed salad","fresh","conventional",0.28
+"sweet potato","fresh","conventional",0.41
+"savoy","fresh","conventional",0.3
+"wholegrain bread bun","fresh","conventional",0.6
+"wheat bread bun","fresh","conventional",0.62
+"bulgur","fresh","conventional",0.52
+"couscous","fresh","conventional",0.44
+"millet","fresh","conventional",0.52
+"crispbread","fresh","conventional",0.53
+"egg noodles","fresh","conventional",0.46
+"lasagna noodles","fresh","conventional",0.46
+"linguine","fresh","conventional",0.46
+"pasta","fresh","conventional",0.46
+"wholewheat noodles","fresh","conventional",0.44
+"toast","fresh","conventional",0.48
+"wholegrain toast","fresh","conventional",0.46
+"wholegrain bread","fresh","conventional",0.59
+"bread baguette","fresh","conventional",0.61
+"wheat bread","fresh","conventional",0.61
+"all-purpose flour","fresh","conventional",0.34
+"panko","fresh","conventional",0.34
+"wholewheat flour","fresh","conventional",0.34
+"walnuts","fresh","conventional",0.95
+"brown lentils","fresh","conventional",0.61
+"green lentils","fresh","conventional",0.61
+"lentils","fresh","conventional",0.61
+"cream cheese","fresh","conventional",5.65
+"philadelphia cream cheese","fresh","conventional",5.65
+"ricotta","fresh","conventional",5.65
+"low-fat curd cheese","fresh","conventional",2.52
+"mozzarella","fresh","conventional",4.34
+"curd cheese","fresh","conventional",3.4
+"whipping cream","fresh","conventional",4.31
+"schmand","fresh","conventional",3.66
+"blackberries","fresh","conventional",0.69
+"fig","fresh","conventional",0.89
+"grapefruit","fresh","conventional",0.39
+"blueberries","fresh","conventional",0.54
+"raspberries","fresh","conventional",1.2
+"cherries","fresh","conventional",0.22
+"honeyberries","fresh","conventional",0.22
+"jabuticabas","fresh","conventional",0.22
+"surinam cherries","fresh","conventional",0.22
+"mango","fresh","conventional",1.73
+"passion fruit","fresh","conventional",2.3
+"ackee","fresh","conventional",0.22
+"damson","fresh","conventional",0.22
+"jambul","fresh","conventional",0.22
+"japanese plum","fresh","conventional",0.22
+"gooseberries","fresh","conventional",0.69
+"watermelon","fresh","conventional",0.35
+"icing sugar","fresh","conventional",0.49
+"vegetable stock","fresh","conventional",1.49
+"honey","fresh","conventional",1.92
+"chicken broth","fresh","conventional",1.51
+"coconut milk","fresh","conventional",0.54
+"beef broth","fresh","conventional",1.78
+"pea veggie burger","fresh","conventional",1.8
+"soy veggie burger","fresh","conventional",1.1
+"peanut butter","fresh","conventional",2
+"pastry","fresh","conventional",1.6
+"puff pastry","fresh","conventional",1.6
+"veggie nugget","fresh","conventional",1.3
+"veggie patty","fresh","conventional",1.3
+"gnocchi","fresh","conventional",0.6
+"chicken nuggets","fresh","conventional",3.3
+"chicken cold cuts","fresh","conventional",2.9
+"coffee powder","fresh","conventional",5.6
+"cocoa powder","fresh","conventional",5
+"cheese emmentaler","fresh","conventional",6
+"parmesan","fresh","conventional",6.3
+"lupin flour","fresh","conventional",0.4
+"spelt drink","fresh","conventional",0.3
+"oats drink","fresh","conventional",0.3
+"almond drink","fresh","conventional",0.3
+"mineral water","fresh","conventional",0.2857143
+"soy curd","fresh","conventional",0.7
+"beef mince","fresh","conventional",9.2
+"apple juice","fresh","conventional",0.4
+"orange juice","fresh","conventional",0.7
+"dark chocolate","fresh","conventional",4.1
+"milk chocolade","fresh","conventional",4.1
+"white chocolate","fresh","conventional",4.1
+"tempeh","fresh","conventional",0.7
+"venison","fresh","conventional",11.5
+"vegan sausage","fresh","conventional",1.7
+"thuringian sausage","fresh","conventional",2.9
+"beef cold cuts","fresh","conventional",7.9
+"ham","fresh","conventional",3.23
+"bacon","fresh","conventional",3.23
+"cashew nuts","fresh","conventional",4.7985316
+"chestnuts","fresh","conventional",2.8097916
+"hazelnuts","fresh","conventional",1.7768884
+"pistachios","fresh","conventional",3.0648319
+"artichoke","fresh","conventional",1.0115564
+"jerusalem artichoke","fresh","conventional",1.0115564
+"chicory","fresh","conventional",0.5924849
+"endive","fresh","conventional",0.5924849
+"cheddar cheese","fresh","conventional",15.1549862
+"quinoa","fresh","conventional",0.65
+"almonds","fresh","conventional",2.25
+"apple","fresh","conventional",0.437
+"crab apple","fresh","conventional",0.437
+"fuji apple","fresh","conventional",0.437
+"apricot","fresh","conventional",0.314
+"eggplant","fresh","conventional",4.59
+"avocado","fresh","conventional",0.956
+"banana","fresh","conventional",0.395
+"barley","fresh","conventional",0.602
+"pearl barley","fresh","conventional",0.602
+"barley","fresh","organic",0.363
+"barley","fresh","swiss integrated production",0.415
+"broccoli","fresh","conventional",0.53
+"butter","fresh","conventional",8.49
+"buttermilk","fresh","conventional",3.73
+"red cabbage","fresh","conventional",0.415
+"bok choy","fresh","conventional",0.407
+"white cabbage","fresh","conventional",0.407
+"baby carrot","fresh","conventional",0.265
+"carrot","fresh","conventional",0.265
+"beef","fresh","conventional",14.9
+"cauliflower","fresh","conventional",0.486
+"celeriac","fresh","conventional",0.552
+"celery","fresh","conventional",0.552
+"cheese","fresh","conventional",14.9
+"chicken","fresh","conventional",2.48
+"cocoa beans","fresh","conventional",19.7
+"coconut oil","fresh","conventional",2.98
+"coconut","fresh","conventional",0.912
+"coffee","fresh","conventional",7.75
+"coffee beans","fresh","conventional",7.75
+"cottonseed oil","fresh","conventional",1.82
+"full cream milk","fresh","conventional",1.98
+"milk","fresh","conventional",1.98
+"cream","fresh","conventional",2.99
+"sour cream","fresh","conventional",2.99
+"cucumber","fresh","conventional",3.38
+"beans","fresh","organic",0.711
+"black beans","fresh","organic",0.711
+"borlotti beans","fresh","organic",0.711
+"broad beans","fresh","organic",0.711
+"fava beans","fresh","organic",0.711
+"green beans","fresh","organic",0.711
+"kidney beans","fresh","organic",0.711
+"mung beans","fresh","conventional",0.711
+"navy beans","fresh","conventional",0.711
+"pinto beans","fresh","organic",0.711
+"runner beans","fresh","organic",0.711
+"beans","fresh","swiss integrated production",0.537
+"black beans","fresh","swiss integrated production",0.537
+"borlotti beans","fresh","swiss integrated production",0.537
+"broad beans","fresh","swiss integrated production",0.537
+"fava beans","fresh","swiss integrated production",0.537
+"green beans","fresh","swiss integrated production",0.537
+"kidney beans","fresh","swiss integrated production",0.537
+"mung beans","fresh","swiss integrated production",0.537
+"navy beans","fresh","swiss integrated production",0.537
+"pinto beans","fresh","swiss integrated production",0.537
+"runner beans","fresh","swiss integrated production",0.537
+"fennel","fresh","conventional",0.498
+"fish oil","fresh","conventional",1.2
+"barracuda","fresh","conventional",0.55
+"basa","fresh","conventional",0.55
+"bass","fresh","conventional",0.55
+"black cod","fresh","conventional",0.55
+"blowfish","fresh","conventional",0.55
+"brill","fresh","conventional",0.55
+"butter fish","fresh","conventional",0.55
+"catfish","fresh","conventional",0.55
+"cod","fresh","conventional",0.55
+"dorade","fresh","conventional",0.55
+"flounder","fresh","conventional",0.55
+"grouper","fresh","conventional",0.55
+"haddock","fresh","conventional",0.55
+"halibut","fresh","conventional",0.55
+"lingcod","fresh","conventional",0.55
+"monkfish","fresh","conventional",0.55
+"mullet","fresh","conventional",0.55
+"patagonian toothfish","fresh","conventional",0.55
+"perch","fresh","conventional",0.55
+"pike","fresh","conventional",0.55
+"pollock","fresh","conventional",0.55
+"salmon","fresh","conventional",0.55
+"sanddab","fresh","conventional",0.55
+"sea bass","fresh","conventional",0.55
+"shad","fresh","conventional",0.55
+"skate","fresh","conventional",0.55
+"sole","fresh","conventional",0.55
+"sturgeon","fresh","conventional",0.55
+"tilefish","fresh","conventional",0.55
+"turbot","fresh","conventional",0.55
+"whitebait","fresh","conventional",0.55
+"whitefish","fresh","conventional",0.55
+"whiting","fresh","conventional",0.55
+"anchovy","fresh","conventional",0.599
+"hake","fresh","conventional",0.8
+"tuna","fresh","conventional",2.93
+"bluefish","fresh","conventional",2.93
+"bombay duck","fresh","conventional",2.93
+"bream","fresh","conventional",2.93
+"dogfish","fresh","conventional",2.93
+"herring","fresh","conventional",2.93
+"john dory","fresh","conventional",2.93
+"mackerel","fresh","conventional",2.93
+"mahi mahi","fresh","conventional",2.93
+"orange roughy","fresh","conventional",2.93
+"pomfret","fresh","conventional",2.93
+"pompano","fresh","conventional",2.93
+"sardine","fresh","conventional",2.93
+"sprat","fresh","conventional",2.93
+"swordfish","fresh","conventional",2.93
+"grapes","fresh","conventional",0.333
+"green asparagus","fresh","conventional",1.15
+"bell pepper","fresh","conventional",2.62
+"green bell pepper","fresh","conventional",2.62
+"habanero","fresh","conventional",2.62
+"jalapeno","fresh","conventional",2.62
+"okra","fresh","conventional",2.62
+"red bell pepper","fresh","conventional",2.62
+"red chilli","fresh","conventional",2.62
+"yellow bell pepper","fresh","conventional",2.62
+"iceberg lettuce","fresh","conventional",0.253
+"kiwi","fresh","conventional",0.594
+"lemon","fresh","conventional",0.409
+"lemon juice","fresh","conventional",0.409
+"lemon zest","fresh","conventional",0.409
+"lime","fresh","conventional",0.409
+"bibb lettuce","fresh","conventional",3.59
+"lettuce","fresh","conventional",3.59
+"linseed","fresh","conventional",1.17
+"baby corn","fresh","conventional",0.56
+"corn","fresh","conventional",0.56
+"corn","fresh","organic",0.528
+"corn","fresh","swiss integrated production",0.354
+"corn kernel","fresh","conventional",1.41
+"corn kernel","fresh","organic",1.52
+"corn kernel","fresh","swiss integrated production",1.03
+"cornstarch","fresh","conventional",0.928
+"clementine","fresh","conventional",0.713
+"mandarine","fresh","conventional",0.713
+"tangerine","fresh","conventional",0.713
+"bitter melon","fresh","conventional",0.226
+"cantaloupe","fresh","conventional",0.226
+"honeydew","fresh","conventional",0.226
+"melon","fresh","conventional",0.226
+"catnip","fresh","conventional",0.406
+"mint","fresh","conventional",0.406
+"peppermint","fresh","conventional",0.406
+"spearmint","fresh","conventional",0.406
+"oats","fresh","conventional",0.728
+"green olives","fresh","conventional",0.438
+"kalamata olives","fresh","conventional",0.438
+"olives","fresh","conventional",0.438
+"garlic","fresh","conventional",0.449
+"green onion","fresh","conventional",0.449
+"onion","fresh","conventional",0.449
+"red onion","fresh","conventional",0.449
+"scallion","fresh","conventional",0.449
+"shallot","fresh","conventional",0.449
+"spring onion","fresh","conventional",0.449
+"blood orange","fresh","conventional",0.307
+"kumquat","fresh","conventional",0.307
+"orange","fresh","conventional",0.307
+"orange peel","fresh","conventional",0.307
+"palm fruit","fresh","conventional",0.932
+"palm kernel oil","fresh","conventional",2.95
+"palm oil","fresh","conventional",2.4
+"papaya","fresh","conventional",0.267
+"paris market carrot","fresh","conventional",0.192
+"nectarine","fresh","conventional",0.591
+"peach","fresh","conventional",0.591
+"peanuts","fresh","conventional",1.53
+"pear","fresh","conventional",0.606
+"pineapple","fresh","conventional",0.196
+"potato","fresh","conventional",0.328
+"russet  potato","fresh","conventional",0.328
+"potato starch","fresh","conventional",0.68
+"potato","fresh","organic",0.233
+"russet  potato","fresh","organic",0.233
+"potato","fresh","swiss integrated production",0.0888
+"russet  potato","fresh","swiss integrated production",0.0888
+"baby peas","fresh","conventional",0.403
+"chickpeas","fresh","conventional",0.403
+"peas","fresh","conventional",0.403
+"split peas","fresh","conventional",0.403
+"sugar snap peas","fresh","conventional",0.403
+"peas","fresh","organic",0.744
+"split peas","fresh","organic",0.744
+"sugar snap peas","fresh","organic",0.744
+"peas","fresh","swiss integrated production",0.444
+"split peas","fresh","swiss integrated production",0.444
+"sugar snap peas","fresh","swiss integrated production",0.444
+"horseradish","fresh","conventional",7.88
+"radish","fresh","conventional",7.88
+"white radish","fresh","conventional",7.88
+"rape oil","fresh","conventional",1.66
+"red meat","fresh","conventional",14.3
+"basmati rice","fresh","conventional",1.63
+"brown rice","fresh","conventional",1.63
+"rice","fresh","conventional",1.63
+"wild rice","fresh","conventional",1.63
+"rye","fresh","conventional",0.718
+"rye","fresh","organic",0.362
+"rye","fresh","swiss integrated production",0.33
+"lamb","fresh","conventional",8.78
+"skimmed milk","fresh","conventional",1.25
+"soybeans","fresh","conventional",3.76
+"soybean drink","fresh","conventional",0.333
+"soybean oil","fresh","conventional",5.98
+"soybeans","fresh","organic",0.774
+"soybeans","fresh","swiss integrated production",0.884
+"baby spinach","fresh","conventional",0.197
+"new zealand spinach","fresh","conventional",0.197
+"spinach","fresh","conventional",0.197
+"blackcurrants","fresh","conventional",0.632
+"boysenberries","fresh","conventional",0.632
+"cloudberries","fresh","conventional",0.632
+"cranberries","fresh","conventional",0.632
+"currants","fresh","conventional",0.632
+"elderberries","fresh","conventional",0.632
+"goji berries","fresh","conventional",0.632
+"jostaberries","fresh","conventional",0.632
+"juniper berries","fresh","conventional",0.632
+"marionberries","fresh","conventional",0.632
+"miracle fruit","fresh","conventional",0.632
+"mulberries","fresh","conventional",0.632
+"pineberries","fresh","conventional",0.632
+"redcurrants","fresh","conventional",0.632
+"salal berries","fresh","conventional",0.632
+"salmonberries","fresh","conventional",0.632
+"strawberries","fresh","conventional",0.632
+"wheat berries","fresh","conventional",0.632
+"white currants","fresh","conventional",0.632
+"brown sugar","fresh","conventional",0.6253
+"granulated sugar","fresh","conventional",0.568
+"sugar","fresh","conventional",0.568
+"sunflower seeds","fresh","conventional",1.42
+"sunflower seeds","fresh","swiss integrated production",0.668
+"sweetcorn","fresh","conventional",0.284
+"sweet sorghum grain","fresh","conventional",0.283
+"sweet sorghum stem","fresh","conventional",0.0327
+"pork","fresh","conventional",8.21
+"ice","fresh","conventional",0.000176
+"tap water","fresh","conventional",0.000176
+"tilapia","fresh","conventional",5.54
+"tofu","fresh","conventional",1.13
+"tomato","fresh","conventional",0.505
+"trout","fresh","conventional",1.93
+"vanilla","fresh","conventional",13.4
+"whey","fresh","conventional",0.161
+"white asparagus","fresh","conventional",1.03
+"yogurt","fresh","conventional",2.2
+"zucchini","fresh","conventional",0.286

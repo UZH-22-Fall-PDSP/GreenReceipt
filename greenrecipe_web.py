@@ -9,7 +9,24 @@ TODO Coner case for scale 1/4
 TODO Scrap non-url ingredient by using textblob
 """
 
-def requestRecipeUrl(input:str):
+def setDefaultURL(URLrecipename):
+    url = 'https://www.food.com/recipe/' + URLrecipename
+    r = requests.get(url)
+    # get a correct url and scale to create full url
+    html_doc = r.text
+    soup = BeautifulSoup(html_doc, features="html.parser")
+    serves = soup.find(class_="value svelte-1o10zxc").string
+    # print(serves)
+    if len(serves) > 0 :
+      if "/" in serves:
+        serves = serves.split("/")
+        serves = serves[0]+"%"+"2F"+serves[1]
+        # 1%2F10
+    print(f"{URLrecipename}\nDefault Serve: {serves}")
+    final_url = r.url + '?units=metric&scale='+serves
+    return final_url
+
+def requestRecipeUrl(input:str, verbose = False):
     # # INPUT(string) : Recipe name from food.com
     # # OUTPUT(Constructor | BeautifulSoup) : BeautifulSoup constructor of Recipe URL html
 
@@ -17,24 +34,35 @@ def requestRecipeUrl(input:str):
     # input.index(EXPECTED_RECIPE_PAGE)
     # input = input.split('?')[0]
     
-    url = 'https://www.food.com/recipe/' + input + '?units=metric&scale=10'
-    
+    # TODO: Tasks pending completion -@hyeongkyunkim at 11/15/2022, 12:55:05 PM
+    # apply default serve portion to the scaping url link
+
+    # url = 'https://www.food.com/recipe/' + input + '?units=metric&scale=10'
+    url = setDefaultURL(input)
     r = requests.get(url)
     html_doc = r.text
     soup = BeautifulSoup(html_doc, features="html.parser")
 
+    if verbose: print(f"Done - Scraping URL... {url}")
+
     return soup
 
-def parseRecipeName(soup:BeautifulSoup):
+def parseRecipeName(soup:BeautifulSoup, verbose = False):
     # # INPUT(Constructor | BeautifulSoup) : BeautifulSoup constructor of Recipe URL html
     # # OUTPUT(tuple | string, List of dictionary) : Recipe Name
     recipeTitle = soup.title.text.split(' - Food.com')[0]
+
+    if verbose: print(f"Done - Parsing recipe name... {recipeTitle}")
+
     return recipeTitle
 
-def parseRecipeIngrd(soup:BeautifulSoup):
+def parseRecipeIngrd(soup:BeautifulSoup, verbose = False):
     # # INPUT(Constructor | BeautifulSoup) : BeautifulSoup constructor of Recipe URL html
     # # OUTPUT(List of dictionary) : Ingredients List
     ingrdList = findIngrd(soup)
+
+    if verbose: print(f"DONE - Parsing recipe ingredients... {ingrdList}")
+
     return ingrdList
 
 def findIngrd(soup:BeautifulSoup):

@@ -17,38 +17,82 @@ class greenrecipe():
         self.grp_nlp = nlp.greenrecipe_nlp(self.grp_db.get_ingrd_list())
         print("## nlp constructor success!")  
 
-    def get_co2_emissions(self, recipe, verbose = False):
-        if verbose: print("----------------------------------------\n## Web Scraping ....")
-        urlsoup = web.requestRecipeUrl(recipe)
+    def get_recipe_co2_emissions(self, recipe, verbose = False):
 
-        recipeName = web.parseRecipeName(urlsoup)
-        isExist, total_co2, ingrdList_co2 = self.grp_db.search_recipe_in_db(recipeName)
+        if verbose: print("----------------------------------------\n## 1. SCARPING URL ....")
+        urlsoup = web.requestRecipeUrl(recipe, verbose)
+        recipeName = web.parseRecipeName(urlsoup, verbose)
 
-        if isExist:
-            # In case the total_co2 of this recipe was calculated before.
-            if verbose: print("----------------------------------------\n## Recipe already in userhistory DB ....")
-        else:
+        if verbose: print("----------------------------------------\n## 2. CHECKING userHistory DB ....")
+        isExist, total_co2, ingrdList_co2 = self.grp_db.search_recipe_in_db(recipeName, verbose)
+
+        if not(isExist):
             # In case the total_co2 of this recipe is new.
-            if verbose: print("## Scraping recipe ingredients ....")
-            ingrdList = web.parseRecipeIngrd(urlsoup)
-            if verbose: print(f"{recipeName}\n{ingrdList}\n----------------------------------------\n## NLP for Ingredient ....")
-            ingrdList, update_history = self.grp_nlp.find_similar_ing(ingrdList)
+            if verbose: print("----------------------------------------\n## 3. PREPARING Ingredients Data")
+            ingrdList = web.parseRecipeIngrd(urlsoup, verbose)
+            ingrdList, update_history = self.grp_nlp.find_similar_ing(ingrdList, verbose)
+            self.grp_db.update_nlpsimresult(update_history, verbose)
 
-            """
-            TODO Temporary Dataset for update_history
-            # ingrd = ''.join(random.choices(string.ascii_uppercase + string.digits, k=5))
-            # update_history = [{'ingrd':ingrd,'result':[('A',0.01),('B',0.01),('C',0.01)]}]
-            """
+            if verbose: print("----------------------------------------\n## 4. CALCULATING Recipe CO2 Total....")
+            total_co2, ingrdList_co2 = self.grp_db.search_ingrdCO2_total(ingrdList, verbose)
+            self.grp_db.update_userhistory(recipeName, total_co2, ingrdList_co2, verbose)
 
-            if verbose: print(f"{update_history}\n## Update nlpsimresult DB ....")
-            self.grp_db.update_nlpsimresult(update_history)
-
-            if verbose: print("----------------------------------------\n## Calculate CO2 ....")
-            total_co2, ingrdList_co2 = self.grp_db.search_ingrdCO2_total(ingrdList)
-
-            if verbose: print("## Update userhistory DB ....")
-            self.grp_db.update_userhistory(recipeName, total_co2, ingrdList_co2)
-
-        if verbose: print(f"{total_co2}\n----------------------------------------\nDone!")
-            
+        if verbose: print(f"----------------------------------------\n## 5. RESULT {recipeName}...\n{total_co2}\n{ingrdList_co2}\n\n")
         return {'recipeName' : recipeName, 'totalCO2': total_co2, 'ingrdCO2List': ingrdList_co2}
+
+    def get_ingrd_co2_emissions(self, ingrdList, verbose=False):
+        # TODO: Tasks pending completion -@hyeongkyunkim at 11/15/2022, 12:29:23 AM
+        # Unit Test
+
+        if verbose: print("----------------------------------------\n## 1. TYPECAST Ingredient List....")
+        typecast_ingrdList = []
+
+        for i, ingrd in enumerate(ingrdList['ingrd']):
+            _ = {}
+            _['ingredient'] = ingrd
+            _['quantity'] = ingrdList['Ingrd_q'][i]
+            _['unit'] = ingrdList['Ingrd_u'][i]
+            typecast_ingrdList.append(_)
+        typecast_ingrdList, update_history = self.grp_nlp.find_similar_ing(typecast_ingrdList, verbose)
+        self.grp_db.update_nlpsimresult(update_history, verbose)
+
+        if verbose: print("----------------------------------------\n## 2. CALCULATING Ingredients CO2....")
+        total_co2, ingrdList_co2 = self.grp_db.search_ingrdCO2_total(typecast_ingrdList, verbose)
+
+        if verbose: print(f"----------------------------------------\n## 3. RESULT...\n{total_co2}\n{ingrdList_co2}\n\n")
+        return {'totalCO2': total_co2, 'ingrdCO2List': ingrdList_co2}
+
+    def get_simingrdset_co2_emissions(self, ingrd, verbose=False):
+        # TODO: Tasks pending completion -@hyeongkyunkim at 11/15/2022, 12:36:17 AM
+        # Unit test
+
+        ingrdList = [{'ingredient':ingrd}]
+        
+        if verbose: print("----------------------------------------\n## 1. PREPARING Ingredients Data")
+        _, update_history = self.grp_nlp.find_similar_ing(ingrdList, verbose)
+        self.grp_db.update_nlpsimresult(update_history, verbose)
+
+        typecast_ingrdList = []
+
+        for ingrd in update_history[0]['res']:
+            _ = {}
+            _['ingredient'] = ingrd[0]
+            _['quantity'] = 1
+            _['unit'] = 'kg'
+            typecast_ingrdList.append(_)
+
+        if verbose: print("----------------------------------------\n## 2. CALCULATING Ingredients CO2....")
+        _, ingrdList_co2 = self.grp_db.search_ingrdCO2_total(typecast_ingrdList, verbose)
+
+        return ingrdList_co2
+
+    def get_catingrdset_co2_emissions(self, category, verbose = False):
+        # TODO: Tasks pending completion -@hyeongkyunkim at 11/15/2022, 12:36:17 AM
+        # Unit test
+        if verbose: print(f"----------------------------------------\n## 1. Query Ingredients in the category")
+        cat_ingrd_co2_list = self.grp_db.get_cat_ingrd_list(category, verbose)
+        return cat_ingrd_co2_list
+
+
+def id_generator(size=6, chars=string.ascii_uppercase + string.digits):
+    return ''.join(random.choice(chars) for _ in range(size))

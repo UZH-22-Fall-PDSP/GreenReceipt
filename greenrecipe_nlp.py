@@ -1,18 +1,19 @@
 from scipy.spatial import distance
-import fasttext
+from gensim.models import FastText
+
 
 
 class greenrecipe_nlp():
   def __init__(self, ingrd_list):
 
-    self.ft = fasttext.load_model('../model/fastText/cc.en.300.bin')
+    self.ft = FastText.load('../model/fastText/fooddotcom_v3')
     self.ingrd_list = ingrd_list ## Unique Ingredient List from the Emissions Table
     self.ingrd_db_wvs = [] ## Word vector list of Unique Ingredient List from the Emissions Table
 
     for ingrd in ingrd_list:
-      self.ingrd_db_wvs.append(self.ft.get_word_vector(ingrd))
+      self.ingrd_db_wvs.append(self.ft.wv.get_vector(ingrd))
 
-  def find_similar_ing(self, recipeIngrdList):
+  def find_similar_ing(self, recipeIngrdList, verbose = False):
 
     ref_name_list = self.ingrd_list
     ref_vector_list = self.ingrd_db_wvs
@@ -23,7 +24,7 @@ class greenrecipe_nlp():
       dist = []
       
       name = recipeIngrd['ingredient']
-      vector = self.ft.get_word_vector(name)   
+      vector = self.ft.wv.get_vector(name)   
 
       for ref_vector in ref_vector_list:
         cos_sim = distance.cosine(vector, ref_vector)
@@ -48,5 +49,5 @@ class greenrecipe_nlp():
                                         (rank2, rank2_value),
                                         (rank3, rank3_value)]})
 
-      
+    if verbose: print(f"DONE - Similarity result {update_history}")
     return  recipeIngrdList, update_history
