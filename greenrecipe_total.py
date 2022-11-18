@@ -30,7 +30,7 @@ class greenrecipe():
             # In case the total_co2 of this recipe is new.
             if verbose: print("----------------------------------------\n## 3. PREPARING Ingredients Data")
             ingrdList = web.parseRecipeIngrd(urlsoup, verbose)
-            ingrdList, update_history = self.grp_nlp.find_similar_ing(ingrdList, verbose)
+            ingrdList, update_history, _ = self.grp_nlp.find_similar_ing(ingrdList, verbose)
             self.grp_db.update_nlpsimresult(update_history, verbose)
 
             if verbose: print("----------------------------------------\n## 4. CALCULATING Recipe CO2 Total....")
@@ -46,14 +46,14 @@ class greenrecipe():
 
         if verbose: print("----------------------------------------\n## 1. TYPECAST Ingredient List....")
         typecast_ingrdList = []
-
+        print(ingrdList)
         for i, ingrd in enumerate(ingrdList['ingrd']):
             _ = {}
             _['ingredient'] = ingrd
-            _['quantity'] = ingrdList['Ingrd_q'][i]
-            _['unit'] = ingrdList['Ingrd_u'][i]
+            _['quantity'] = ingrdList['ingrd_q'][i]
+            _['unit'] = ingrdList['ingrd_u'][i]
             typecast_ingrdList.append(_)
-        typecast_ingrdList, update_history = self.grp_nlp.find_similar_ing(typecast_ingrdList, verbose)
+        typecast_ingrdList, update_history, _ = self.grp_nlp.find_similar_ing(typecast_ingrdList, verbose)
         self.grp_db.update_nlpsimresult(update_history, verbose)
 
         if verbose: print("----------------------------------------\n## 2. CALCULATING Ingredients CO2....")
@@ -69,18 +69,17 @@ class greenrecipe():
         ingrdList = [{'ingredient':ingrd}]
         
         if verbose: print("----------------------------------------\n## 1. PREPARING Ingredients Data")
-        _, update_history = self.grp_nlp.find_similar_ing(ingrdList, verbose)
+        _, update_history, ingrdSimList = self.grp_nlp.find_similar_ing(ingrdList, verbose)
         self.grp_db.update_nlpsimresult(update_history, verbose)
 
         typecast_ingrdList = []
-
-        for ingrd in update_history[0]['res']:
+        for ingrd in ingrdSimList:
             _ = {}
-            _['ingredient'] = ingrd[0]
+            _['ingredient'] = ingrd
             _['quantity'] = 1
             _['unit'] = 'kg'
             typecast_ingrdList.append(_)
-
+            
         if verbose: print("----------------------------------------\n## 2. CALCULATING Ingredients CO2....")
         _, ingrdList_co2 = self.grp_db.search_ingrdCO2_total(typecast_ingrdList, verbose)
 
