@@ -11,6 +11,15 @@ grp = greenrecipe_total.greenrecipe()
 
 @app.route('/recipeCO2', methods=['GET']) 
 def get_recipe_co2_emissions():
+    # TODO: Tasks pending completion -@hyeongkyunkim at 11/18/2022, 10:14:31 AM
+    # Nontype input check
+    #       File "/Users/hyeongkyunkim/Desktop/github/uzh/UZH-HS22-PDSP/GreenRecipe-Backend/greenrecipe_total.py", line 23, in get_recipe_co2_emissions
+    #     urlsoup = web.requestRecipeUrl(recipe, verbose)
+    #   File "/Users/hyeongkyunkim/Desktop/github/uzh/UZH-HS22-PDSP/GreenRecipe-Backend/greenrecipe_web.py", line 41, in requestRecipeUrl
+    #     url = setDefaultURL(input)
+    #   File "/Users/hyeongkyunkim/Desktop/github/uzh/UZH-HS22-PDSP/GreenRecipe-Backend/greenrecipe_web.py", line 18, in setDefaultURL
+    #     serves = soup.find(class_="value svelte-1o10zxc").string
+    # AttributeError: 'NoneType' object has no attribute 'string'
     recipe = request.args.get('recipe')
     result = grp.get_recipe_co2_emissions(recipe, verbose = True) 
     return result
