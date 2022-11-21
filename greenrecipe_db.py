@@ -16,7 +16,6 @@ def id_generator(size=6, chars=string.ascii_uppercase + string.digits):
     return ''.join(random.choice(chars) for _ in range(size))
 
 
-CO2_REF_DB = 'postgresql://readonly:!JjFlGMjREf53965EvE@35.228.50.60:5432/postgres'
 CO2_GCP_DB = 'postgresql://postgres:postgres@34.77.44.117:5432/postgres'
 TEST_DB = 'postgresql://postgres:postgres@localhost:5432/postgres'
 
