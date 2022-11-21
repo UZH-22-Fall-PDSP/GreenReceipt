@@ -17,7 +17,7 @@ def id_generator(size=6, chars=string.ascii_uppercase + string.digits):
 
 
 CO2_REF_DB = 'postgresql://readonly:!JjFlGMjREf53965EvE@35.228.50.60:5432/postgres'
-CO2_GCP_DB = 'postgresql://postgres:postgres@34.163.206.28:5432/postgres'
+CO2_GCP_DB = 'postgresql://postgres:postgres@34.77.44.117:5432/postgres'
 TEST_DB = 'postgresql://postgres:postgres@localhost:5432/postgres'
 
 Base = declarative_base()
@@ -26,7 +26,7 @@ class greenrecipe_db():
 
     def __init__(self):
 
-        self.ref_db_engine = sqlalchemy.create_engine(TEST_DB)
+        self.ref_db_engine = sqlalchemy.create_engine(CO2_GCP_DB)
         self.ref_db_con = self.ref_db_engine.connect()
         self.ref_db_emissions_df = pd.read_sql_table(
             "emissions",
@@ -36,7 +36,7 @@ class greenrecipe_db():
                     'category'],
         )
 
-        self.gcp_db_engine = sqlalchemy.create_engine(TEST_DB)
+        self.gcp_db_engine = sqlalchemy.create_engine(CO2_GCP_DB)
         self.gcp_db_con = self.gcp_db_engine.connect()
         
         self.Userhistory = Table('userhistory', Base.metadata, autoload=True, autoload_with=self.gcp_db_engine)

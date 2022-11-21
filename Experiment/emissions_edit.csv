@@ -1,496 +1,496 @@
-ingredient,variety,certification,emissions,category
-mushrooms,canned,conventional,2.55,Vegetables
-corn,canned,conventional,1.2,"Grains, Beans and Nuts"
-tomato,canned,conventional,1.87,Vegetables
-beans,canned,conventional,1.21,"Grains, Beans and Nuts"
-peas,canned,conventional,1.24,Fruits
-chickpeas,canned,conventional,1.25,Vegetables
-lentils,canned,conventional,1.46,Vegetables
-pineapple,canned,conventional,1.71,Fruits
-apricot,canned,conventional,1.7,Fruits
-peach,canned,conventional,1.52,Fruits
-basil,dried,conventional,3.124,Vegetables
-rosemary,dried,conventional,0.532,Vegetables
-thyme,dried,conventional,2.812,Vegetables
-dates,dried,organic,4.22,"Grains, Beans and Nuts"
-tea,dried,conventional,5.06,"Grains, Beans and Nuts"
-oregano,dried,conventional,2.362,Vegetables
-lentils,dried,conventional,0.61,Vegetables
-dates,dried,conventional,3.01,"Grains, Beans and Nuts"
-spices,fresh,conventional,0.652,"Grains, Beans and Nuts"
-basil,fresh,conventional,0.272,Vegetables
-oregano,fresh,conventional,0.572,Vegetables
-beetroot,fresh,conventional,0.32,Vegetables
-dates,fresh,organic,3.56,"Grains, Beans and Nuts"
-crab,frozen,conventional,12.59,Fish and Seafood
-crayfish,frozen,conventional,12.59,Fish and Seafood
-langostino,frozen,conventional,12.59,Fruits
-prawns,frozen,conventional,12.59,Fish and Seafood
-scampi,frozen,conventional,12.59,Fish and Seafood
-shrimps,frozen,conventional,12.59,Fish and Seafood
-brussel sprouts,frozen,conventional,0.59,Vegetables
-strawberries,frozen,conventional,0.71,Fruits
-blueberries,frozen,conventional,0.64,Fruits
-raspberries,frozen,conventional,0.66,Fruits
-french fries,frozen,conventional,0.7,"Grains, Beans and Nuts"
-beetroot,glass,conventional,1.36,Vegetables
-red cabbage,glass,conventional,0.96,Vegetables
-kale,glass,conventional,0.8,Vegetables
-black-eyed beans,fresh,conventional,0.403,"Grains, Beans and Nuts"
-plum,fresh,conventional,0.22,Fruits
-burger bun,fresh,conventional,0.61,Meat and Poultry
-anise,fresh,conventional,4.526,Fruits
-baking powder,fresh,conventional,1.504,Dairy Foods
-baking soda,fresh,conventional,1.249,"Grains, Beans and Nuts"
-lemon balm,fresh,conventional,0.602,Fruits
-balsamic vinegar,fresh,conventional,1.474,Vegetables
-bbq sauce,fresh,conventional,0.983,Dairy Foods
-bay leaves,fresh,conventional,0.602,"Grains, Beans and Nuts"
-cardamom,fresh,conventional,0.652,"Grains, Beans and Nuts"
-chervil,fresh,conventional,0.356,Fruits
-chia seeds,fresh,conventional,0.92,"Grains, Beans and Nuts"
-chili,fresh,conventional,0.681,Vegetables
-cinnamon,fresh,conventional,0.643,"Grains, Beans and Nuts"
-clove,fresh,conventional,0.492,Vegetables
-cilantro,fresh,conventional,0.656,Vegetables
-cumin,fresh,conventional,0.652,Vegetables
-turmeric,fresh,conventional,0.652,Vegetables
-curry,fresh,conventional,0.652,Vegetables
-dill,fresh,conventional,0.682,Vegetables
-fish sauce,fresh,conventional,2.388,Fish and Seafood
-gelatin,fresh,conventional,0.652,Dairy Foods
-ginger,fresh,conventional,1.226,Fruits
-herbs,fresh,conventional,0.652,Vegetables
-ketchup,fresh,conventional,1.352,Meat and Poultry
-lemon grass,fresh,conventional,4.562,Fruits
-macadamia nuts,fresh,conventional,2.678,"Grains, Beans and Nuts"
-marjoram,fresh,conventional,0.602,Vegetables
-mayonnaise,fresh,conventional,1.914,Dairy Foods
-caraway,fresh,conventional,0.642,Vegetables
-mustard,fresh,conventional,1.108,Dairy Foods
-mustard seeds,fresh,conventional,4.784,Vegetables
-mustard leaves,fresh,conventional,4.784,"Grains, Beans and Nuts"
-nutmeg,fresh,conventional,0.367,Dairy Foods
-sesame oil,fresh,conventional,3.019,Vegetables
-onion powder,fresh,conventional,4.072,Vegetables
-paprika,fresh,conventional,4.274,Vegetables
-parsley,fresh,conventional,0.682,Vegetables
-pecans,fresh,conventional,2.678,"Grains, Beans and Nuts"
-pepper,fresh,conventional,5.314,Vegetables
-pine nuts,fresh,conventional,2.518,"Grains, Beans and Nuts"
-poppy seed,fresh,conventional,0.92,"Grains, Beans and Nuts"
-saffron,fresh,conventional,0.692,"Grains, Beans and Nuts"
-sage,fresh,conventional,0.682,Vegetables
-salt,fresh,conventional,0.584,Vegetables
-sea salt,fresh,conventional,0.384,Fish and Seafood
-sesame,fresh,conventional,2.612,Fish and Seafood
-soy sauce,fresh,conventional,1.344,Dairy Foods
-agave syrup,fresh,conventional,0.969,Fruits
-tabasco sauce,fresh,conventional,4.274,Dairy Foods
-tarragon,fresh,conventional,0.602,Vegetables
-tomatoes paste,fresh,conventional,1.732,Vegetables
-vanilin,fresh,conventional,2.267,"Grains, Beans and Nuts"
-vanilla extract,fresh,conventional,13.827,Dairy Foods
-apple vinegar,fresh,conventional,3.284,Fruits
-white wine vinegar,fresh,conventional,1.474,Fruits
-wasabi,fresh,conventional,0.835,Fish and Seafood
-yeast extract,fresh,conventional,2.194,Dairy Foods
-yeast,fresh,conventional,0.754,Dairy Foods
-beer,fresh,conventional,0.77,Meat and Poultry
-brandy,fresh,conventional,2.07,Fruits
-cognac,fresh,conventional,2.07,Fruits
-liquor,fresh,conventional,2.07,Fruits
-tawny port,fresh,conventional,2.38,Fish and Seafood
-red wine,fresh,conventional,2.16,Meat and Poultry
-white wine,fresh,conventional,2.16,Fruits
-wine,fresh,conventional,2.16,Meat and Poultry
-half-fat margarine,fresh,conventional,1.15,Dairy Foods
-extravirgin olive oil,fresh,conventional,3.06,Vegetables
-olive oil,fresh,conventional,3.06,Vegetables
-sunflower oil,fresh,conventional,2.24,Vegetables
-vegan spreadable fat,fresh,conventional,1.67,Dairy Foods
-full-fat margarine,fresh,conventional,1.78,Dairy Foods
-clams,fresh,conventional,6.29,Fish and Seafood
-cockles,fresh,conventional,6.29,"Grains, Beans and Nuts"
-mussels,fresh,conventional,6.29,Vegetables
-oysters,fresh,conventional,6.29,Fish and Seafood
-scallops,fresh,conventional,6.29,Fish and Seafood
-egg,fresh,conventional,2.04,Vegetables
-sausage,fresh,conventional,3.62,Meat and Poultry
-hot dog,fresh,conventional,3.77,Fruits
-mushrooms,fresh,conventional,1.31,Vegetables
-morel mushrooms,fresh,conventional,1.31,Vegetables
-porcini mushrooms,fresh,conventional,1.31,Vegetables
-portobello mushrooms,fresh,conventional,1.31,Vegetables
-shiitake mushrooms,fresh,conventional,1.31,Vegetables
-wild mushrooms,fresh,conventional,1.31,Vegetables
-lamb's lettuce,fresh,conventional,0.27,Vegetables
-collard green,fresh,conventional,0.35,Vegetables
-kale,fresh,conventional,0.35,Vegetables
-cherry tomatoes,fresh,conventional,0.91,Fruits
-kohlrabi,fresh,conventional,0.43,Vegetables
-acorn squash,fresh,conventional,0.21,Vegetables
-banana squash,fresh,conventional,0.21,Fruits
-butternut squash,fresh,conventional,0.21,Vegetables
-delicata squash,fresh,conventional,0.21,Vegetables
-gem squash,fresh,conventional,0.21,Vegetables
-hubbard squash,fresh,conventional,0.21,Vegetables
-pumpkin,fresh,conventional,0.21,Fruits
-spaghetti squash,fresh,conventional,0.21,Vegetables
-chives,fresh,conventional,0.21,Vegetables
-leek,fresh,conventional,0.21,Vegetables
-brussel sprouts,fresh,conventional,0.28,Vegetables
-arugula,fresh,conventional,0.27,Vegetables
-mixed salad,fresh,conventional,0.28,Dairy Foods
-sweet potato,fresh,conventional,0.41,Vegetables
-savoy,fresh,conventional,0.3,Vegetables
-wholegrain bread bun,fresh,conventional,0.6,"Grains, Beans and Nuts"
-wheat bread bun,fresh,conventional,0.62,"Grains, Beans and Nuts"
-bulgur,fresh,conventional,0.52,"Grains, Beans and Nuts"
-couscous,fresh,conventional,0.44,"Grains, Beans and Nuts"
-millet,fresh,conventional,0.52,Fish and Seafood
-crispbread,fresh,conventional,0.53,Dairy Foods
-egg noodles,fresh,conventional,0.46,Vegetables
-lasagna noodles,fresh,conventional,0.46,Dairy Foods
-linguine,fresh,conventional,0.46,Fish and Seafood
-pasta,fresh,conventional,0.46,Vegetables
-wholewheat noodles,fresh,conventional,0.44,"Grains, Beans and Nuts"
-toast,fresh,conventional,0.48,Meat and Poultry
-wholegrain toast,fresh,conventional,0.46,"Grains, Beans and Nuts"
-wholegrain bread,fresh,conventional,0.59,"Grains, Beans and Nuts"
-bread baguette,fresh,conventional,0.61,Dairy Foods
-wheat bread,fresh,conventional,0.61,Dairy Foods
-all-purpose flour,fresh,conventional,0.34,"Grains, Beans and Nuts"
-panko,fresh,conventional,0.34,Fish and Seafood
-wholewheat flour,fresh,conventional,0.34,"Grains, Beans and Nuts"
-walnuts,fresh,conventional,0.95,"Grains, Beans and Nuts"
-brown lentils,fresh,conventional,0.61,Vegetables
-green lentils,fresh,conventional,0.61,Vegetables
-lentils,fresh,conventional,0.61,Vegetables
-cream cheese,fresh,conventional,5.65,Dairy Foods
-philadelphia cream cheese,fresh,conventional,5.65,Dairy Foods
-ricotta,fresh,conventional,5.65,Dairy Foods
-low-fat curd cheese,fresh,conventional,2.52,Dairy Foods
-mozzarella,fresh,conventional,4.34,Dairy Foods
-curd cheese,fresh,conventional,3.4,Dairy Foods
-whipping cream,fresh,conventional,4.31,Dairy Foods
-schmand,fresh,conventional,3.66,Fruits
-blackberries,fresh,conventional,0.69,Fruits
-fig,fresh,conventional,0.89,Fish and Seafood
-grapefruit,fresh,conventional,0.39,Fruits
-blueberries,fresh,conventional,0.54,Fruits
-raspberries,fresh,conventional,1.2,Fruits
-cherries,fresh,conventional,0.22,Fruits
-honeyberries,fresh,conventional,0.22,Fruits
-jabuticabas,fresh,conventional,0.22,Vegetables
-surinam cherries,fresh,conventional,0.22,Fruits
-mango,fresh,conventional,1.73,Fruits
-passion fruit,fresh,conventional,2.3,Fruits
-ackee,fresh,conventional,0.22,Fish and Seafood
-damson,fresh,conventional,0.22,"Grains, Beans and Nuts"
-jambul,fresh,conventional,0.22,Meat and Poultry
-japanese plum,fresh,conventional,0.22,Fruits
-gooseberries,fresh,conventional,0.69,Fruits
-watermelon,fresh,conventional,0.35,Fruits
-icing sugar,fresh,conventional,0.49,Dairy Foods
-vegetable stock,fresh,conventional,1.49,Vegetables
-honey,fresh,conventional,1.92,Fruits
-chicken broth,fresh,conventional,1.51,Meat and Poultry
-coconut milk,fresh,conventional,0.54,Dairy Foods
-beef broth,fresh,conventional,1.78,Vegetables
-pea veggie burger,fresh,conventional,1.8,Vegetables
-soy veggie burger,fresh,conventional,1.1,Vegetables
-peanut butter,fresh,conventional,2.0,Dairy Foods
-pastry,fresh,conventional,1.6,Dairy Foods
-puff pastry,fresh,conventional,1.6,Dairy Foods
-veggie nugget,fresh,conventional,1.3,Vegetables
-veggie patty,fresh,conventional,1.3,Meat and Poultry
-gnocchi,fresh,conventional,0.6,Vegetables
-chicken nuggets,fresh,conventional,3.3,Meat and Poultry
-chicken cold cuts,fresh,conventional,2.9,Meat and Poultry
-coffee powder,fresh,conventional,5.6,Dairy Foods
-cocoa powder,fresh,conventional,5.0,Dairy Foods
-cheese emmentaler,fresh,conventional,6.0,Dairy Foods
-parmesan,fresh,conventional,6.3,Dairy Foods
-lupin flour,fresh,conventional,0.4,"Grains, Beans and Nuts"
-spelt drink,fresh,conventional,0.3,Fruits
-oats drink,fresh,conventional,0.3,Fruits
-almond drink,fresh,conventional,0.3,Fruits
-mineral water,fresh,conventional,0.2857143,Fruits
-soy curd,fresh,conventional,0.7,Fish and Seafood
-beef mince,fresh,conventional,9.2,Meat and Poultry
-apple juice,fresh,conventional,0.4,Fruits
-orange juice,fresh,conventional,0.7,Fruits
-dark chocolate,fresh,conventional,4.1,Dairy Foods
-milk chocolade,fresh,conventional,4.1,Dairy Foods
-white chocolate,fresh,conventional,4.1,Dairy Foods
-tempeh,fresh,conventional,0.7,Meat and Poultry
-venison,fresh,conventional,11.5,Meat and Poultry
-vegan sausage,fresh,conventional,1.7,Meat and Poultry
-thuringian sausage,fresh,conventional,2.9,Meat and Poultry
-beef cold cuts,fresh,conventional,7.9,Meat and Poultry
-ham,fresh,conventional,3.23,Dairy Foods
-bacon,fresh,conventional,3.23,Meat and Poultry
-cashew nuts,fresh,conventional,4.7985316,"Grains, Beans and Nuts"
-chestnuts,fresh,conventional,2.8097916,Vegetables
-hazelnuts,fresh,conventional,1.7768884,"Grains, Beans and Nuts"
-pistachios,fresh,conventional,3.0648319,Fruits
-artichoke,fresh,conventional,1.0115564,Vegetables
-jerusalem artichoke,fresh,conventional,1.0115564,Vegetables
-chicory,fresh,conventional,0.5924849,"Grains, Beans and Nuts"
-endive,fresh,conventional,0.5924849,Vegetables
-cheddar cheese,fresh,conventional,15.1549862,Dairy Foods
-quinoa,fresh,conventional,0.65,"Grains, Beans and Nuts"
-almonds,fresh,conventional,2.25,"Grains, Beans and Nuts"
-apple,fresh,conventional,0.437,Fruits
-crab apple,fresh,conventional,0.437,Fruits
-fuji apple,fresh,conventional,0.437,Fruits
-apricot,fresh,conventional,0.314,Fruits
-eggplant,fresh,conventional,4.59,Vegetables
-avocado,fresh,conventional,0.956,Fruits
-banana,fresh,conventional,0.395,Fruits
-barley,fresh,conventional,0.602,Vegetables
-pearl barley,fresh,conventional,0.602,Vegetables
-barley,fresh,organic,0.363,Vegetables
-barley,fresh,swiss integrated production,0.415,Vegetables
-broccoli,fresh,conventional,0.53,Vegetables
-butter,fresh,conventional,8.49,Dairy Foods
-buttermilk,fresh,conventional,3.73,Dairy Foods
-red cabbage,fresh,conventional,0.415,Vegetables
-bok choy,fresh,conventional,0.407,Vegetables
-white cabbage,fresh,conventional,0.407,Vegetables
-baby carrot,fresh,conventional,0.265,Vegetables
-carrot,fresh,conventional,0.265,Vegetables
-beef,fresh,conventional,14.9,Meat and Poultry
-cauliflower,fresh,conventional,0.486,Vegetables
-celeriac,fresh,conventional,0.552,Vegetables
-celery,fresh,conventional,0.552,Vegetables
-cheese,fresh,conventional,14.9,Dairy Foods
-chicken,fresh,conventional,2.48,Meat and Poultry
-cocoa beans,fresh,conventional,19.7,"Grains, Beans and Nuts"
-coconut oil,fresh,conventional,2.98,"Grains, Beans and Nuts"
-coconut,fresh,conventional,0.912,"Grains, Beans and Nuts"
-coffee,fresh,conventional,7.75,Dairy Foods
-coffee beans,fresh,conventional,7.75,"Grains, Beans and Nuts"
-cottonseed oil,fresh,conventional,1.82,Dairy Foods
-full cream milk,fresh,conventional,1.98,Dairy Foods
-milk,fresh,conventional,1.98,Dairy Foods
-cream,fresh,conventional,2.99,Dairy Foods
-sour cream,fresh,conventional,2.99,Dairy Foods
-cucumber,fresh,conventional,3.38,Vegetables
-beans,fresh,organic,0.711,"Grains, Beans and Nuts"
-black beans,fresh,organic,0.711,"Grains, Beans and Nuts"
-borlotti beans,fresh,organic,0.711,Meat and Poultry
-broad beans,fresh,organic,0.711,"Grains, Beans and Nuts"
-fava beans,fresh,organic,0.711,"Grains, Beans and Nuts"
-green beans,fresh,organic,0.711,Vegetables
-kidney beans,fresh,organic,0.711,"Grains, Beans and Nuts"
-mung beans,fresh,conventional,0.711,"Grains, Beans and Nuts"
-navy beans,fresh,conventional,0.711,"Grains, Beans and Nuts"
-pinto beans,fresh,organic,0.711,"Grains, Beans and Nuts"
-runner beans,fresh,organic,0.711,"Grains, Beans and Nuts"
-beans,fresh,swiss integrated production,0.537,"Grains, Beans and Nuts"
-black beans,fresh,swiss integrated production,0.537,"Grains, Beans and Nuts"
-borlotti beans,fresh,swiss integrated production,0.537,Meat and Poultry
-broad beans,fresh,swiss integrated production,0.537,"Grains, Beans and Nuts"
-fava beans,fresh,swiss integrated production,0.537,"Grains, Beans and Nuts"
-green beans,fresh,swiss integrated production,0.537,Vegetables
-kidney beans,fresh,swiss integrated production,0.537,"Grains, Beans and Nuts"
-mung beans,fresh,swiss integrated production,0.537,"Grains, Beans and Nuts"
-navy beans,fresh,swiss integrated production,0.537,"Grains, Beans and Nuts"
-pinto beans,fresh,swiss integrated production,0.537,"Grains, Beans and Nuts"
-runner beans,fresh,swiss integrated production,0.537,"Grains, Beans and Nuts"
-fennel,fresh,conventional,0.498,Vegetables
-fish oil,fresh,conventional,1.2,Fish and Seafood
-barracuda,fresh,conventional,0.55,Vegetables
-basa,fresh,conventional,0.55,Meat and Poultry
-bass,fresh,conventional,0.55,Meat and Poultry
-black cod,fresh,conventional,0.55,"Grains, Beans and Nuts"
-blowfish,fresh,conventional,0.55,Fish and Seafood
-brill,fresh,conventional,0.55,Meat and Poultry
-butter fish,fresh,conventional,0.55,Fish and Seafood
-catfish,fresh,conventional,0.55,Fish and Seafood
-cod,fresh,conventional,0.55,"Grains, Beans and Nuts"
-dorade,fresh,conventional,0.55,Fruits
-flounder,fresh,conventional,0.55,Fish and Seafood
-grouper,fresh,conventional,0.55,Fish and Seafood
-haddock,fresh,conventional,0.55,Fish and Seafood
-halibut,fresh,conventional,0.55,Fish and Seafood
-lingcod,fresh,conventional,0.55,"Grains, Beans and Nuts"
-monkfish,fresh,conventional,0.55,Fish and Seafood
-mullet,fresh,conventional,0.55,Meat and Poultry
-patagonian toothfish,fresh,conventional,0.55,Fish and Seafood
-perch,fresh,conventional,0.55,Fruits
-pike,fresh,conventional,0.55,Fish and Seafood
-pollock,fresh,conventional,0.55,Meat and Poultry
-salmon,fresh,conventional,0.55,Fish and Seafood
-sanddab,fresh,conventional,0.55,Dairy Foods
-sea bass,fresh,conventional,0.55,Fish and Seafood
-shad,fresh,conventional,0.55,Fish and Seafood
-skate,fresh,conventional,0.55,Meat and Poultry
-sole,fresh,conventional,0.55,Fish and Seafood
-sturgeon,fresh,conventional,0.55,Meat and Poultry
-tilefish,fresh,conventional,0.55,Fish and Seafood
-turbot,fresh,conventional,0.55,Meat and Poultry
-whitebait,fresh,conventional,0.55,Fruits
-whitefish,fresh,conventional,0.55,Fish and Seafood
-whiting,fresh,conventional,0.55,Dairy Foods
-anchovy,fresh,conventional,0.599,Fish and Seafood
-hake,fresh,conventional,0.8,Fish and Seafood
-tuna,fresh,conventional,2.93,Fish and Seafood
-bluefish,fresh,conventional,2.93,Fish and Seafood
-bombay duck,fresh,conventional,2.93,Meat and Poultry
-bream,fresh,conventional,2.93,Dairy Foods
-dogfish,fresh,conventional,2.93,Fish and Seafood
-herring,fresh,conventional,2.93,Vegetables
-john dory,fresh,conventional,2.93,"Grains, Beans and Nuts"
-mackerel,fresh,conventional,2.93,Dairy Foods
-mahi mahi,fresh,conventional,2.93,Fish and Seafood
-orange roughy,fresh,conventional,2.93,Fruits
-pomfret,fresh,conventional,2.93,Meat and Poultry
-pompano,fresh,conventional,2.93,Dairy Foods
-sardine,fresh,conventional,2.93,Vegetables
-sprat,fresh,conventional,2.93,Vegetables
-swordfish,fresh,conventional,2.93,Fish and Seafood
-grapes,fresh,conventional,0.333,Fruits
-green asparagus,fresh,conventional,1.15,Vegetables
-bell pepper,fresh,conventional,2.62,Vegetables
-green bell pepper,fresh,conventional,2.62,Vegetables
-habanero,fresh,conventional,2.62,Vegetables
-jalapeno,fresh,conventional,2.62,Vegetables
-okra,fresh,conventional,2.62,Vegetables
-red bell pepper,fresh,conventional,2.62,Vegetables
-red chilli,fresh,conventional,2.62,Vegetables
-yellow bell pepper,fresh,conventional,2.62,Vegetables
-iceberg lettuce,fresh,conventional,0.253,Vegetables
-kiwi,fresh,conventional,0.594,Fruits
-lemon,fresh,conventional,0.409,Fruits
-lemon juice,fresh,conventional,0.409,Fruits
-lemon zest,fresh,conventional,0.409,Fruits
-lime,fresh,conventional,0.409,Fruits
-bibb lettuce,fresh,conventional,3.59,Vegetables
-lettuce,fresh,conventional,3.59,Vegetables
-linseed,fresh,conventional,1.17,"Grains, Beans and Nuts"
-baby corn,fresh,conventional,0.56,Vegetables
-corn,fresh,conventional,0.56,"Grains, Beans and Nuts"
-corn,fresh,organic,0.528,"Grains, Beans and Nuts"
-corn,fresh,swiss integrated production,0.354,"Grains, Beans and Nuts"
-corn kernel,fresh,conventional,1.41,"Grains, Beans and Nuts"
-corn kernel,fresh,organic,1.52,"Grains, Beans and Nuts"
-corn kernel,fresh,swiss integrated production,1.03,"Grains, Beans and Nuts"
-cornstarch,fresh,conventional,0.928,"Grains, Beans and Nuts"
-clementine,fresh,conventional,0.713,Fruits
-mandarine,fresh,conventional,0.713,Fruits
-tangerine,fresh,conventional,0.713,Fruits
-bitter melon,fresh,conventional,0.226,Fruits
-cantaloupe,fresh,conventional,0.226,Fruits
-honeydew,fresh,conventional,0.226,Fruits
-melon,fresh,conventional,0.226,Fruits
-catnip,fresh,conventional,0.406,Vegetables
-mint,fresh,conventional,0.406,Fruits
-peppermint,fresh,conventional,0.406,Fruits
-spearmint,fresh,conventional,0.406,Fruits
-oats,fresh,conventional,0.728,"Grains, Beans and Nuts"
-green olives,fresh,conventional,0.438,Vegetables
-kalamata olives,fresh,conventional,0.438,Vegetables
-olives,fresh,conventional,0.438,Vegetables
-garlic,fresh,conventional,0.449,Vegetables
-green onion,fresh,conventional,0.449,Vegetables
-onion,fresh,conventional,0.449,Vegetables
-red onion,fresh,conventional,0.449,Vegetables
-scallion,fresh,conventional,0.449,Vegetables
-shallot,fresh,conventional,0.449,Vegetables
-spring onion,fresh,conventional,0.449,Vegetables
-blood orange,fresh,conventional,0.307,Fruits
-kumquat,fresh,conventional,0.307,Fruits
-orange,fresh,conventional,0.307,Fruits
-orange peel,fresh,conventional,0.307,Fruits
-palm fruit,fresh,conventional,0.932,Fruits
-palm kernel oil,fresh,conventional,2.95,Meat and Poultry
-palm oil,fresh,conventional,2.4,Meat and Poultry
-papaya,fresh,conventional,0.267,Fruits
-paris market carrot,fresh,conventional,0.192,Vegetables
-nectarine,fresh,conventional,0.591,Fruits
-peach,fresh,conventional,0.591,Fruits
-peanuts,fresh,conventional,1.53,"Grains, Beans and Nuts"
-pear,fresh,conventional,0.606,Fruits
-pineapple,fresh,conventional,0.196,Fruits
-potato,fresh,conventional,0.328,Vegetables
-russet  potato,fresh,conventional,0.328,Vegetables
-potato starch,fresh,conventional,0.68,Vegetables
-potato,fresh,organic,0.233,Vegetables
-russet  potato,fresh,organic,0.233,Vegetables
-potato,fresh,swiss integrated production,0.0888,Vegetables
-russet  potato,fresh,swiss integrated production,0.0888,Vegetables
-baby peas,fresh,conventional,0.403,Vegetables
-chickpeas,fresh,conventional,0.403,Vegetables
-peas,fresh,conventional,0.403,Fruits
-split peas,fresh,conventional,0.403,"Grains, Beans and Nuts"
-sugar snap peas,fresh,conventional,0.403,Fruits
-peas,fresh,organic,0.744,Fruits
-split peas,fresh,organic,0.744,"Grains, Beans and Nuts"
-sugar snap peas,fresh,organic,0.744,Fruits
-peas,fresh,swiss integrated production,0.444,Fruits
-split peas,fresh,swiss integrated production,0.444,"Grains, Beans and Nuts"
-sugar snap peas,fresh,swiss integrated production,0.444,Fruits
-horseradish,fresh,conventional,7.88,Dairy Foods
-radish,fresh,conventional,7.88,Vegetables
-white radish,fresh,conventional,7.88,Dairy Foods
-rape oil,fresh,conventional,1.66,Meat and Poultry
-red meat,fresh,conventional,14.3,Meat and Poultry
-basmati rice,fresh,conventional,1.63,"Grains, Beans and Nuts"
-brown rice,fresh,conventional,1.63,Meat and Poultry
-rice,fresh,conventional,1.63,"Grains, Beans and Nuts"
-wild rice,fresh,conventional,1.63,Vegetables
-rye,fresh,conventional,0.718,Fish and Seafood
-rye,fresh,organic,0.362,Fish and Seafood
-rye,fresh,swiss integrated production,0.33,Fish and Seafood
-lamb,fresh,conventional,8.78,Meat and Poultry
-skimmed milk,fresh,conventional,1.25,Dairy Foods
-soybeans,fresh,conventional,3.76,"Grains, Beans and Nuts"
-soybean drink,fresh,conventional,0.333,Fruits
-soybean oil,fresh,conventional,5.98,Vegetables
-soybeans,fresh,organic,0.774,"Grains, Beans and Nuts"
-soybeans,fresh,swiss integrated production,0.884,"Grains, Beans and Nuts"
-baby spinach,fresh,conventional,0.197,Vegetables
-new zealand spinach,fresh,conventional,0.197,Vegetables
-spinach,fresh,conventional,0.197,Vegetables
-blackcurrants,fresh,conventional,0.632,Fruits
-boysenberries,fresh,conventional,0.632,"Grains, Beans and Nuts"
-cloudberries,fresh,conventional,0.632,Fruits
-cranberries,fresh,conventional,0.632,Fruits
-currants,fresh,conventional,0.632,Fruits
-elderberries,fresh,conventional,0.632,Fruits
-goji berries,fresh,conventional,0.632,Fruits
-jostaberries,fresh,conventional,0.632,"Grains, Beans and Nuts"
-juniper berries,fresh,conventional,0.632,Fruits
-marionberries,fresh,conventional,0.632,Fruits
-miracle fruit,fresh,conventional,0.632,Fruits
-mulberries,fresh,conventional,0.632,Fruits
-pineberries,fresh,conventional,0.632,Fruits
-redcurrants,fresh,conventional,0.632,Fruits
-salal berries,fresh,conventional,0.632,Vegetables
-salmonberries,fresh,conventional,0.632,Fish and Seafood
-strawberries,fresh,conventional,0.632,Fruits
-wheat berries,fresh,conventional,0.632,"Grains, Beans and Nuts"
-white currants,fresh,conventional,0.632,Fruits
-brown sugar,fresh,conventional,0.6253,"Grains, Beans and Nuts"
-granulated sugar,fresh,conventional,0.568,Dairy Foods
-sugar,fresh,conventional,0.568,Dairy Foods
-sunflower seeds,fresh,conventional,1.42,"Grains, Beans and Nuts"
-sunflower seeds,fresh,swiss integrated production,0.668,"Grains, Beans and Nuts"
-sweetcorn,fresh,conventional,0.284,"Grains, Beans and Nuts"
-sweet sorghum grain,fresh,conventional,0.283,Fruits
-sweet sorghum stem,fresh,conventional,0.0327,Fruits
-pork,fresh,conventional,8.21,Meat and Poultry
-ice,fresh,conventional,0.000176,Fruits
-tap water,fresh,conventional,0.000176,Fruits
-tilapia,fresh,conventional,5.54,Fish and Seafood
-tofu,fresh,conventional,1.13,Fish and Seafood
-tomato,fresh,conventional,0.505,Vegetables
-trout,fresh,conventional,1.93,Fish and Seafood
-vanilla,fresh,conventional,13.4,Dairy Foods
-whey,fresh,conventional,0.161,Dairy Foods
-white asparagus,fresh,conventional,1.03,Vegetables
-yogurt,fresh,conventional,2.2,Dairy Foods
-zucchini,fresh,conventional,0.286,Vegetables
+ingredient;variety;certification;emissions;category
+mushrooms;canned;conventional;2.55;Vegetables
+corn;canned;conventional;1.2;Grains, Beans and Nuts
+tomato;canned;conventional;1.87;Vegetables
+beans;canned;conventional;1.21;Grains, Beans and Nuts
+peas;canned;conventional;1.24;Fruits
+chickpeas;canned;conventional;1.25;Vegetables
+lentils;canned;conventional;1.46;Vegetables
+pineapple;canned;conventional;1.71;Fruits
+apricot;canned;conventional;1.7;Fruits
+peach;canned;conventional;1.52;Fruits
+basil;dried;conventional;3.124;Vegetables
+rosemary;dried;conventional;0.532;Vegetables
+thyme;dried;conventional;2.812;Vegetables
+dates;dried;organic;4.22;Grains, Beans and Nuts
+tea;dried;conventional;5.06;Grains, Beans and Nuts
+oregano;dried;conventional;2.362;Vegetables
+lentils;dried;conventional;0.61;Vegetables
+dates;dried;conventional;3.01;Grains, Beans and Nuts
+spices;fresh;conventional;0.652;Grains, Beans and Nuts
+basil;fresh;conventional;0.272;Vegetables
+oregano;fresh;conventional;0.572;Vegetables
+beetroot;fresh;conventional;0.32;Vegetables
+dates;fresh;organic;3.56;Grains, Beans and Nuts
+crab;frozen;conventional;12.59;Fish and Seafood
+crayfish;frozen;conventional;12.59;Fish and Seafood
+langostino;frozen;conventional;12.59;Fruits
+prawns;frozen;conventional;12.59;Fish and Seafood
+scampi;frozen;conventional;12.59;Fish and Seafood
+shrimps;frozen;conventional;12.59;Fish and Seafood
+brussel sprouts;frozen;conventional;0.59;Vegetables
+strawberries;frozen;conventional;0.71;Fruits
+blueberries;frozen;conventional;0.64;Fruits
+raspberries;frozen;conventional;0.66;Fruits
+french fries;frozen;conventional;0.7;Grains, Beans and Nuts
+beetroot;glass;conventional;1.36;Vegetables
+red cabbage;glass;conventional;0.96;Vegetables
+kale;glass;conventional;0.8;Vegetables
+black-eyed beans;fresh;conventional;0.403;Grains, Beans and Nuts
+plum;fresh;conventional;0.22;Fruits
+burger bun;fresh;conventional;0.61;Meat and Poultry
+anise;fresh;conventional;4.526;Fruits
+baking powder;fresh;conventional;1.504;Dairy Foods
+baking soda;fresh;conventional;1.249;Grains, Beans and Nuts
+lemon balm;fresh;conventional;0.602;Fruits
+balsamic vinegar;fresh;conventional;1.474;Vegetables
+bbq sauce;fresh;conventional;0.983;Dairy Foods
+bay leaves;fresh;conventional;0.602;Grains, Beans and Nuts
+cardamom;fresh;conventional;0.652;Grains, Beans and Nuts
+chervil;fresh;conventional;0.356;Fruits
+chia seeds;fresh;conventional;0.92;Grains, Beans and Nuts
+chili;fresh;conventional;0.681;Vegetables
+cinnamon;fresh;conventional;0.643;Grains, Beans and Nuts
+clove;fresh;conventional;0.492;Vegetables
+cilantro;fresh;conventional;0.656;Vegetables
+cumin;fresh;conventional;0.652;Vegetables
+turmeric;fresh;conventional;0.652;Vegetables
+curry;fresh;conventional;0.652;Vegetables
+dill;fresh;conventional;0.682;Vegetables
+fish sauce;fresh;conventional;2.388;Fish and Seafood
+gelatin;fresh;conventional;0.652;Dairy Foods
+ginger;fresh;conventional;1.226;Fruits
+herbs;fresh;conventional;0.652;Vegetables
+ketchup;fresh;conventional;1.352;Meat and Poultry
+lemon grass;fresh;conventional;4.562;Fruits
+macadamia nuts;fresh;conventional;2.678;Grains, Beans and Nuts
+marjoram;fresh;conventional;0.602;Vegetables
+mayonnaise;fresh;conventional;1.914;Dairy Foods
+caraway;fresh;conventional;0.642;Vegetables
+mustard;fresh;conventional;1.108;Dairy Foods
+mustard seeds;fresh;conventional;4.784;Vegetables
+mustard leaves;fresh;conventional;4.784;Grains, Beans and Nuts
+nutmeg;fresh;conventional;0.367;Dairy Foods
+sesame oil;fresh;conventional;3.019;Vegetables
+onion powder;fresh;conventional;4.072;Vegetables
+paprika;fresh;conventional;4.274;Vegetables
+parsley;fresh;conventional;0.682;Vegetables
+pecans;fresh;conventional;2.678;Grains, Beans and Nuts
+pepper;fresh;conventional;5.314;Vegetables
+pine nuts;fresh;conventional;2.518;Grains, Beans and Nuts
+poppy seed;fresh;conventional;0.92;Grains, Beans and Nuts
+saffron;fresh;conventional;0.692;Grains, Beans and Nuts
+sage;fresh;conventional;0.682;Vegetables
+salt;fresh;conventional;0.584;Vegetables
+sea salt;fresh;conventional;0.384;Fish and Seafood
+sesame;fresh;conventional;2.612;Fish and Seafood
+soy sauce;fresh;conventional;1.344;Dairy Foods
+agave syrup;fresh;conventional;0.969;Fruits
+tabasco sauce;fresh;conventional;4.274;Dairy Foods
+tarragon;fresh;conventional;0.602;Vegetables
+tomatoes paste;fresh;conventional;1.732;Vegetables
+vanilin;fresh;conventional;2.267;Grains, Beans and Nuts
+vanilla extract;fresh;conventional;13.827;Dairy Foods
+apple vinegar;fresh;conventional;3.284;Fruits
+white wine vinegar;fresh;conventional;1.474;Fruits
+wasabi;fresh;conventional;0.835;Fish and Seafood
+yeast extract;fresh;conventional;2.194;Dairy Foods
+yeast;fresh;conventional;0.754;Dairy Foods
+beer;fresh;conventional;0.77;Meat and Poultry
+brandy;fresh;conventional;2.07;Fruits
+cognac;fresh;conventional;2.07;Fruits
+liquor;fresh;conventional;2.07;Fruits
+tawny port;fresh;conventional;2.38;Fish and Seafood
+red wine;fresh;conventional;2.16;Meat and Poultry
+white wine;fresh;conventional;2.16;Fruits
+wine;fresh;conventional;2.16;Meat and Poultry
+half-fat margarine;fresh;conventional;1.15;Dairy Foods
+extravirgin olive oil;fresh;conventional;3.06;Vegetables
+olive oil;fresh;conventional;3.06;Vegetables
+sunflower oil;fresh;conventional;2.24;Vegetables
+vegan spreadable fat;fresh;conventional;1.67;Dairy Foods
+full-fat margarine;fresh;conventional;1.78;Dairy Foods
+clams;fresh;conventional;6.29;Fish and Seafood
+cockles;fresh;conventional;6.29;Grains, Beans and Nuts
+mussels;fresh;conventional;6.29;Vegetables
+oysters;fresh;conventional;6.29;Fish and Seafood
+scallops;fresh;conventional;6.29;Fish and Seafood
+egg;fresh;conventional;2.04;Vegetables
+sausage;fresh;conventional;3.62;Meat and Poultry
+hot dog;fresh;conventional;3.77;Fruits
+mushrooms;fresh;conventional;1.31;Vegetables
+morel mushrooms;fresh;conventional;1.31;Vegetables
+porcini mushrooms;fresh;conventional;1.31;Vegetables
+portobello mushrooms;fresh;conventional;1.31;Vegetables
+shiitake mushrooms;fresh;conventional;1.31;Vegetables
+wild mushrooms;fresh;conventional;1.31;Vegetables
+lamb's lettuce;fresh;conventional;0.27;Vegetables
+collard green;fresh;conventional;0.35;Vegetables
+kale;fresh;conventional;0.35;Vegetables
+cherry tomatoes;fresh;conventional;0.91;Fruits
+kohlrabi;fresh;conventional;0.43;Vegetables
+acorn squash;fresh;conventional;0.21;Vegetables
+banana squash;fresh;conventional;0.21;Fruits
+butternut squash;fresh;conventional;0.21;Vegetables
+delicata squash;fresh;conventional;0.21;Vegetables
+gem squash;fresh;conventional;0.21;Vegetables
+hubbard squash;fresh;conventional;0.21;Vegetables
+pumpkin;fresh;conventional;0.21;Fruits
+spaghetti squash;fresh;conventional;0.21;Vegetables
+chives;fresh;conventional;0.21;Vegetables
+leek;fresh;conventional;0.21;Vegetables
+brussel sprouts;fresh;conventional;0.28;Vegetables
+arugula;fresh;conventional;0.27;Vegetables
+mixed salad;fresh;conventional;0.28;Dairy Foods
+sweet potato;fresh;conventional;0.41;Vegetables
+savoy;fresh;conventional;0.3;Vegetables
+wholegrain bread bun;fresh;conventional;0.6;Grains, Beans and Nuts
+wheat bread bun;fresh;conventional;0.62;Grains, Beans and Nuts
+bulgur;fresh;conventional;0.52;Grains, Beans and Nuts
+couscous;fresh;conventional;0.44;Grains, Beans and Nuts
+millet;fresh;conventional;0.52;Fish and Seafood
+crispbread;fresh;conventional;0.53;Dairy Foods
+egg noodles;fresh;conventional;0.46;Vegetables
+lasagna noodles;fresh;conventional;0.46;Dairy Foods
+linguine;fresh;conventional;0.46;Fish and Seafood
+pasta;fresh;conventional;0.46;Vegetables
+wholewheat noodles;fresh;conventional;0.44;Grains, Beans and Nuts
+toast;fresh;conventional;0.48;Meat and Poultry
+wholegrain toast;fresh;conventional;0.46;Grains, Beans and Nuts
+wholegrain bread;fresh;conventional;0.59;Grains, Beans and Nuts
+bread baguette;fresh;conventional;0.61;Dairy Foods
+wheat bread;fresh;conventional;0.61;Dairy Foods
+all-purpose flour;fresh;conventional;0.34;Grains, Beans and Nuts
+panko;fresh;conventional;0.34;Fish and Seafood
+wholewheat flour;fresh;conventional;0.34;Grains, Beans and Nuts
+walnuts;fresh;conventional;0.95;Grains, Beans and Nuts
+brown lentils;fresh;conventional;0.61;Vegetables
+green lentils;fresh;conventional;0.61;Vegetables
+lentils;fresh;conventional;0.61;Vegetables
+cream cheese;fresh;conventional;5.65;Dairy Foods
+philadelphia cream cheese;fresh;conventional;5.65;Dairy Foods
+ricotta;fresh;conventional;5.65;Dairy Foods
+low-fat curd cheese;fresh;conventional;2.52;Dairy Foods
+mozzarella;fresh;conventional;4.34;Dairy Foods
+curd cheese;fresh;conventional;3.4;Dairy Foods
+whipping cream;fresh;conventional;4.31;Dairy Foods
+schmand;fresh;conventional;3.66;Fruits
+blackberries;fresh;conventional;0.69;Fruits
+fig;fresh;conventional;0.89;Fish and Seafood
+grapefruit;fresh;conventional;0.39;Fruits
+blueberries;fresh;conventional;0.54;Fruits
+raspberries;fresh;conventional;1.2;Fruits
+cherries;fresh;conventional;0.22;Fruits
+honeyberries;fresh;conventional;0.22;Fruits
+jabuticabas;fresh;conventional;0.22;Vegetables
+surinam cherries;fresh;conventional;0.22;Fruits
+mango;fresh;conventional;1.73;Fruits
+passion fruit;fresh;conventional;2.3;Fruits
+ackee;fresh;conventional;0.22;Fish and Seafood
+damson;fresh;conventional;0.22;Grains, Beans and Nuts
+jambul;fresh;conventional;0.22;Meat and Poultry
+japanese plum;fresh;conventional;0.22;Fruits
+gooseberries;fresh;conventional;0.69;Fruits
+watermelon;fresh;conventional;0.35;Fruits
+icing sugar;fresh;conventional;0.49;Dairy Foods
+vegetable stock;fresh;conventional;1.49;Vegetables
+honey;fresh;conventional;1.92;Fruits
+chicken broth;fresh;conventional;1.51;Meat and Poultry
+coconut milk;fresh;conventional;0.54;Dairy Foods
+beef broth;fresh;conventional;1.78;Vegetables
+pea veggie burger;fresh;conventional;1.8;Vegetables
+soy veggie burger;fresh;conventional;1.1;Vegetables
+peanut butter;fresh;conventional;2.0;Dairy Foods
+pastry;fresh;conventional;1.6;Dairy Foods
+puff pastry;fresh;conventional;1.6;Dairy Foods
+veggie nugget;fresh;conventional;1.3;Vegetables
+veggie patty;fresh;conventional;1.3;Meat and Poultry
+gnocchi;fresh;conventional;0.6;Vegetables
+chicken nuggets;fresh;conventional;3.3;Meat and Poultry
+chicken cold cuts;fresh;conventional;2.9;Meat and Poultry
+coffee powder;fresh;conventional;5.6;Dairy Foods
+cocoa powder;fresh;conventional;5.0;Dairy Foods
+cheese emmentaler;fresh;conventional;6.0;Dairy Foods
+parmesan;fresh;conventional;6.3;Dairy Foods
+lupin flour;fresh;conventional;0.4;Grains, Beans and Nuts
+spelt drink;fresh;conventional;0.3;Fruits
+oats drink;fresh;conventional;0.3;Fruits
+almond drink;fresh;conventional;0.3;Fruits
+mineral water;fresh;conventional;0.2857143;Fruits
+soy curd;fresh;conventional;0.7;Fish and Seafood
+beef mince;fresh;conventional;9.2;Meat and Poultry
+apple juice;fresh;conventional;0.4;Fruits
+orange juice;fresh;conventional;0.7;Fruits
+dark chocolate;fresh;conventional;4.1;Dairy Foods
+milk chocolade;fresh;conventional;4.1;Dairy Foods
+white chocolate;fresh;conventional;4.1;Dairy Foods
+tempeh;fresh;conventional;0.7;Meat and Poultry
+venison;fresh;conventional;11.5;Meat and Poultry
+vegan sausage;fresh;conventional;1.7;Meat and Poultry
+thuringian sausage;fresh;conventional;2.9;Meat and Poultry
+beef cold cuts;fresh;conventional;7.9;Meat and Poultry
+ham;fresh;conventional;3.23;Dairy Foods
+bacon;fresh;conventional;3.23;Meat and Poultry
+cashew nuts;fresh;conventional;4.7985316;Grains, Beans and Nuts
+chestnuts;fresh;conventional;2.8097916;Vegetables
+hazelnuts;fresh;conventional;1.7768884;Grains, Beans and Nuts
+pistachios;fresh;conventional;3.0648319;Fruits
+artichoke;fresh;conventional;1.0115564;Vegetables
+jerusalem artichoke;fresh;conventional;1.0115564;Vegetables
+chicory;fresh;conventional;0.5924849;Grains, Beans and Nuts
+endive;fresh;conventional;0.5924849;Vegetables
+cheddar cheese;fresh;conventional;15.1549862;Dairy Foods
+quinoa;fresh;conventional;0.65;Grains, Beans and Nuts
+almonds;fresh;conventional;2.25;Grains, Beans and Nuts
+apple;fresh;conventional;0.437;Fruits
+crab apple;fresh;conventional;0.437;Fruits
+fuji apple;fresh;conventional;0.437;Fruits
+apricot;fresh;conventional;0.314;Fruits
+eggplant;fresh;conventional;4.59;Vegetables
+avocado;fresh;conventional;0.956;Fruits
+banana;fresh;conventional;0.395;Fruits
+barley;fresh;conventional;0.602;Vegetables
+pearl barley;fresh;conventional;0.602;Vegetables
+barley;fresh;organic;0.363;Vegetables
+barley;fresh;swiss integrated production;0.415;Vegetables
+broccoli;fresh;conventional;0.53;Vegetables
+butter;fresh;conventional;8.49;Dairy Foods
+buttermilk;fresh;conventional;3.73;Dairy Foods
+red cabbage;fresh;conventional;0.415;Vegetables
+bok choy;fresh;conventional;0.407;Vegetables
+white cabbage;fresh;conventional;0.407;Vegetables
+baby carrot;fresh;conventional;0.265;Vegetables
+carrot;fresh;conventional;0.265;Vegetables
+beef;fresh;conventional;14.9;Meat and Poultry
+cauliflower;fresh;conventional;0.486;Vegetables
+celeriac;fresh;conventional;0.552;Vegetables
+celery;fresh;conventional;0.552;Vegetables
+cheese;fresh;conventional;14.9;Dairy Foods
+chicken;fresh;conventional;2.48;Meat and Poultry
+cocoa beans;fresh;conventional;19.7;Grains, Beans and Nuts
+coconut oil;fresh;conventional;2.98;Grains, Beans and Nuts
+coconut;fresh;conventional;0.912;Grains, Beans and Nuts
+coffee;fresh;conventional;7.75;Dairy Foods
+coffee beans;fresh;conventional;7.75;Grains, Beans and Nuts
+cottonseed oil;fresh;conventional;1.82;Dairy Foods
+full cream milk;fresh;conventional;1.98;Dairy Foods
+milk;fresh;conventional;1.98;Dairy Foods
+cream;fresh;conventional;2.99;Dairy Foods
+sour cream;fresh;conventional;2.99;Dairy Foods
+cucumber;fresh;conventional;3.38;Vegetables
+beans;fresh;organic;0.711;Grains, Beans and Nuts
+black beans;fresh;organic;0.711;Grains, Beans and Nuts
+borlotti beans;fresh;organic;0.711;Meat and Poultry
+broad beans;fresh;organic;0.711;Grains, Beans and Nuts
+fava beans;fresh;organic;0.711;Grains, Beans and Nuts
+green beans;fresh;organic;0.711;Vegetables
+kidney beans;fresh;organic;0.711;Grains, Beans and Nuts
+mung beans;fresh;conventional;0.711;Grains, Beans and Nuts
+navy beans;fresh;conventional;0.711;Grains, Beans and Nuts
+pinto beans;fresh;organic;0.711;Grains, Beans and Nuts
+runner beans;fresh;organic;0.711;Grains, Beans and Nuts
+beans;fresh;swiss integrated production;0.537;Grains, Beans and Nuts
+black beans;fresh;swiss integrated production;0.537;Grains, Beans and Nuts
+borlotti beans;fresh;swiss integrated production;0.537;Meat and Poultry
+broad beans;fresh;swiss integrated production;0.537;Grains, Beans and Nuts
+fava beans;fresh;swiss integrated production;0.537;Grains, Beans and Nuts
+green beans;fresh;swiss integrated production;0.537;Vegetables
+kidney beans;fresh;swiss integrated production;0.537;Grains, Beans and Nuts
+mung beans;fresh;swiss integrated production;0.537;Grains, Beans and Nuts
+navy beans;fresh;swiss integrated production;0.537;Grains, Beans and Nuts
+pinto beans;fresh;swiss integrated production;0.537;Grains, Beans and Nuts
+runner beans;fresh;swiss integrated production;0.537;Grains, Beans and Nuts
+fennel;fresh;conventional;0.498;Vegetables
+fish oil;fresh;conventional;1.2;Fish and Seafood
+barracuda;fresh;conventional;0.55;Vegetables
+basa;fresh;conventional;0.55;Meat and Poultry
+bass;fresh;conventional;0.55;Meat and Poultry
+black cod;fresh;conventional;0.55;Grains, Beans and Nuts
+blowfish;fresh;conventional;0.55;Fish and Seafood
+brill;fresh;conventional;0.55;Meat and Poultry
+butter fish;fresh;conventional;0.55;Fish and Seafood
+catfish;fresh;conventional;0.55;Fish and Seafood
+cod;fresh;conventional;0.55;Grains, Beans and Nuts
+dorade;fresh;conventional;0.55;Fruits
+flounder;fresh;conventional;0.55;Fish and Seafood
+grouper;fresh;conventional;0.55;Fish and Seafood
+haddock;fresh;conventional;0.55;Fish and Seafood
+halibut;fresh;conventional;0.55;Fish and Seafood
+lingcod;fresh;conventional;0.55;Grains, Beans and Nuts
+monkfish;fresh;conventional;0.55;Fish and Seafood
+mullet;fresh;conventional;0.55;Meat and Poultry
+patagonian toothfish;fresh;conventional;0.55;Fish and Seafood
+perch;fresh;conventional;0.55;Fruits
+pike;fresh;conventional;0.55;Fish and Seafood
+pollock;fresh;conventional;0.55;Meat and Poultry
+salmon;fresh;conventional;0.55;Fish and Seafood
+sanddab;fresh;conventional;0.55;Dairy Foods
+sea bass;fresh;conventional;0.55;Fish and Seafood
+shad;fresh;conventional;0.55;Fish and Seafood
+skate;fresh;conventional;0.55;Meat and Poultry
+sole;fresh;conventional;0.55;Fish and Seafood
+sturgeon;fresh;conventional;0.55;Meat and Poultry
+tilefish;fresh;conventional;0.55;Fish and Seafood
+turbot;fresh;conventional;0.55;Meat and Poultry
+whitebait;fresh;conventional;0.55;Fruits
+whitefish;fresh;conventional;0.55;Fish and Seafood
+whiting;fresh;conventional;0.55;Dairy Foods
+anchovy;fresh;conventional;0.599;Fish and Seafood
+hake;fresh;conventional;0.8;Fish and Seafood
+tuna;fresh;conventional;2.93;Fish and Seafood
+bluefish;fresh;conventional;2.93;Fish and Seafood
+bombay duck;fresh;conventional;2.93;Meat and Poultry
+bream;fresh;conventional;2.93;Dairy Foods
+dogfish;fresh;conventional;2.93;Fish and Seafood
+herring;fresh;conventional;2.93;Vegetables
+john dory;fresh;conventional;2.93;Grains, Beans and Nuts
+mackerel;fresh;conventional;2.93;Dairy Foods
+mahi mahi;fresh;conventional;2.93;Fish and Seafood
+orange roughy;fresh;conventional;2.93;Fruits
+pomfret;fresh;conventional;2.93;Meat and Poultry
+pompano;fresh;conventional;2.93;Dairy Foods
+sardine;fresh;conventional;2.93;Vegetables
+sprat;fresh;conventional;2.93;Vegetables
+swordfish;fresh;conventional;2.93;Fish and Seafood
+grapes;fresh;conventional;0.333;Fruits
+green asparagus;fresh;conventional;1.15;Vegetables
+bell pepper;fresh;conventional;2.62;Vegetables
+green bell pepper;fresh;conventional;2.62;Vegetables
+habanero;fresh;conventional;2.62;Vegetables
+jalapeno;fresh;conventional;2.62;Vegetables
+okra;fresh;conventional;2.62;Vegetables
+red bell pepper;fresh;conventional;2.62;Vegetables
+red chilli;fresh;conventional;2.62;Vegetables
+yellow bell pepper;fresh;conventional;2.62;Vegetables
+iceberg lettuce;fresh;conventional;0.253;Vegetables
+kiwi;fresh;conventional;0.594;Fruits
+lemon;fresh;conventional;0.409;Fruits
+lemon juice;fresh;conventional;0.409;Fruits
+lemon zest;fresh;conventional;0.409;Fruits
+lime;fresh;conventional;0.409;Fruits
+bibb lettuce;fresh;conventional;3.59;Vegetables
+lettuce;fresh;conventional;3.59;Vegetables
+linseed;fresh;conventional;1.17;Grains, Beans and Nuts
+baby corn;fresh;conventional;0.56;Vegetables
+corn;fresh;conventional;0.56;Grains, Beans and Nuts
+corn;fresh;organic;0.528;Grains, Beans and Nuts
+corn;fresh;swiss integrated production;0.354;Grains, Beans and Nuts
+corn kernel;fresh;conventional;1.41;Grains, Beans and Nuts
+corn kernel;fresh;organic;1.52;Grains, Beans and Nuts
+corn kernel;fresh;swiss integrated production;1.03;Grains, Beans and Nuts
+cornstarch;fresh;conventional;0.928;Grains, Beans and Nuts
+clementine;fresh;conventional;0.713;Fruits
+mandarine;fresh;conventional;0.713;Fruits
+tangerine;fresh;conventional;0.713;Fruits
+bitter melon;fresh;conventional;0.226;Fruits
+cantaloupe;fresh;conventional;0.226;Fruits
+honeydew;fresh;conventional;0.226;Fruits
+melon;fresh;conventional;0.226;Fruits
+catnip;fresh;conventional;0.406;Vegetables
+mint;fresh;conventional;0.406;Fruits
+peppermint;fresh;conventional;0.406;Fruits
+spearmint;fresh;conventional;0.406;Fruits
+oats;fresh;conventional;0.728;Grains, Beans and Nuts
+green olives;fresh;conventional;0.438;Vegetables
+kalamata olives;fresh;conventional;0.438;Vegetables
+olives;fresh;conventional;0.438;Vegetables
+garlic;fresh;conventional;0.449;Vegetables
+green onion;fresh;conventional;0.449;Vegetables
+onion;fresh;conventional;0.449;Vegetables
+red onion;fresh;conventional;0.449;Vegetables
+scallion;fresh;conventional;0.449;Vegetables
+shallot;fresh;conventional;0.449;Vegetables
+spring onion;fresh;conventional;0.449;Vegetables
+blood orange;fresh;conventional;0.307;Fruits
+kumquat;fresh;conventional;0.307;Fruits
+orange;fresh;conventional;0.307;Fruits
+orange peel;fresh;conventional;0.307;Fruits
+palm fruit;fresh;conventional;0.932;Fruits
+palm kernel oil;fresh;conventional;2.95;Meat and Poultry
+palm oil;fresh;conventional;2.4;Meat and Poultry
+papaya;fresh;conventional;0.267;Fruits
+paris market carrot;fresh;conventional;0.192;Vegetables
+nectarine;fresh;conventional;0.591;Fruits
+peach;fresh;conventional;0.591;Fruits
+peanuts;fresh;conventional;1.53;Grains, Beans and Nuts
+pear;fresh;conventional;0.606;Fruits
+pineapple;fresh;conventional;0.196;Fruits
+potato;fresh;conventional;0.328;Vegetables
+russet  potato;fresh;conventional;0.328;Vegetables
+potato starch;fresh;conventional;0.68;Vegetables
+potato;fresh;organic;0.233;Vegetables
+russet  potato;fresh;organic;0.233;Vegetables
+potato;fresh;swiss integrated production;0.0888;Vegetables
+russet  potato;fresh;swiss integrated production;0.0888;Vegetables
+baby peas;fresh;conventional;0.403;Vegetables
+chickpeas;fresh;conventional;0.403;Vegetables
+peas;fresh;conventional;0.403;Fruits
+split peas;fresh;conventional;0.403;Grains, Beans and Nuts
+sugar snap peas;fresh;conventional;0.403;Fruits
+peas;fresh;organic;0.744;Fruits
+split peas;fresh;organic;0.744;Grains, Beans and Nuts
+sugar snap peas;fresh;organic;0.744;Fruits
+peas;fresh;swiss integrated production;0.444;Fruits
+split peas;fresh;swiss integrated production;0.444;Grains, Beans and Nuts
+sugar snap peas;fresh;swiss integrated production;0.444;Fruits
+horseradish;fresh;conventional;7.88;Dairy Foods
+radish;fresh;conventional;7.88;Vegetables
+white radish;fresh;conventional;7.88;Dairy Foods
+rape oil;fresh;conventional;1.66;Meat and Poultry
+red meat;fresh;conventional;14.3;Meat and Poultry
+basmati rice;fresh;conventional;1.63;Grains, Beans and Nuts
+brown rice;fresh;conventional;1.63;Meat and Poultry
+rice;fresh;conventional;1.63;Grains, Beans and Nuts
+wild rice;fresh;conventional;1.63;Vegetables
+rye;fresh;conventional;0.718;Fish and Seafood
+rye;fresh;organic;0.362;Fish and Seafood
+rye;fresh;swiss integrated production;0.33;Fish and Seafood
+lamb;fresh;conventional;8.78;Meat and Poultry
+skimmed milk;fresh;conventional;1.25;Dairy Foods
+soybeans;fresh;conventional;3.76;Grains, Beans and Nuts
+soybean drink;fresh;conventional;0.333;Fruits
+soybean oil;fresh;conventional;5.98;Vegetables
+soybeans;fresh;organic;0.774;Grains, Beans and Nuts
+soybeans;fresh;swiss integrated production;0.884;Grains, Beans and Nuts
+baby spinach;fresh;conventional;0.197;Vegetables
+new zealand spinach;fresh;conventional;0.197;Vegetables
+spinach;fresh;conventional;0.197;Vegetables
+blackcurrants;fresh;conventional;0.632;Fruits
+boysenberries;fresh;conventional;0.632;Grains, Beans and Nuts
+cloudberries;fresh;conventional;0.632;Fruits
+cranberries;fresh;conventional;0.632;Fruits
+currants;fresh;conventional;0.632;Fruits
+elderberries;fresh;conventional;0.632;Fruits
+goji berries;fresh;conventional;0.632;Fruits
+jostaberries;fresh;conventional;0.632;Grains, Beans and Nuts
+juniper berries;fresh;conventional;0.632;Fruits
+marionberries;fresh;conventional;0.632;Fruits
+miracle fruit;fresh;conventional;0.632;Fruits
+mulberries;fresh;conventional;0.632;Fruits
+pineberries;fresh;conventional;0.632;Fruits
+redcurrants;fresh;conventional;0.632;Fruits
+salal berries;fresh;conventional;0.632;Vegetables
+salmonberries;fresh;conventional;0.632;Fish and Seafood
+strawberries;fresh;conventional;0.632;Fruits
+wheat berries;fresh;conventional;0.632;Grains, Beans and Nuts
+white currants;fresh;conventional;0.632;Fruits
+brown sugar;fresh;conventional;0.6253;Grains, Beans and Nuts
+granulated sugar;fresh;conventional;0.568;Dairy Foods
+sugar;fresh;conventional;0.568;Dairy Foods
+sunflower seeds;fresh;conventional;1.42;Grains, Beans and Nuts
+sunflower seeds;fresh;swiss integrated production;0.668;Grains, Beans and Nuts
+sweetcorn;fresh;conventional;0.284;Grains, Beans and Nuts
+sweet sorghum grain;fresh;conventional;0.283;Fruits
+sweet sorghum stem;fresh;conventional;0.0327;Fruits
+pork;fresh;conventional;8.21;Meat and Poultry
+ice;fresh;conventional;0.000176;Fruits
+tap water;fresh;conventional;0.000176;Fruits
+tilapia;fresh;conventional;5.54;Fish and Seafood
+tofu;fresh;conventional;1.13;Fish and Seafood
+tomato;fresh;conventional;0.505;Vegetables
+trout;fresh;conventional;1.93;Fish and Seafood
+vanilla;fresh;conventional;13.4;Dairy Foods
+whey;fresh;conventional;0.161;Dairy Foods
+white asparagus;fresh;conventional;1.03;Vegetables
+yogurt;fresh;conventional;2.2;Dairy Foods
+zucchini;fresh;conventional;0.286;Vegetables
