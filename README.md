@@ -1,6 +1,9 @@
 # Green Eats 🍽🌿
 ### project description 
 
+. /back_end/bin/activate
+
+
 * Building a web-app that that calculates the carbon footprint of the ingredients in a given
 recipe and to help users make more sustainable meal choices (ideally recommends more sustainable alternatives.)
 * It calculates the carbon footprint of the ingredients in a given recipe and recommends more sustainable alternatives
