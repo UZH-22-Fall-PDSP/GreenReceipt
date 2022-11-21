@@ -6,10 +6,10 @@ from gensim.models import FastText
 class greenrecipe_nlp():
   def __init__(self, ingrd_list):
 
-    self.ft = FastText.load('model/fooddotcom_v3')
+    self.ft = FastText.load('../model/fooddotcom_v3_gensim4')
     self.ingrd_list = ingrd_list ## Unique Ingredient List from the Emissions Table
     self.ingrd_db_wvs = [] ## Word vector list of Unique Ingredient List from the Emissions Table
-
+ 
     for ingrd in ingrd_list:
       self.ingrd_db_wvs.append(self.ft.wv.get_vector(ingrd))
 
