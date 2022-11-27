@@ -1,5 +1,4 @@
 import json
-from numpy import True_
 import pandas as pd
 
 import sqlalchemy
@@ -8,13 +7,6 @@ from sqlalchemy import Table
 from sqlalchemy.orm import Session
 from sqlalchemy.orm import declarative_base
 from sqlalchemy.dialects.postgresql import insert
-
-import random
-import string
-
-def id_generator(size=6, chars=string.ascii_uppercase + string.digits):
-    return ''.join(random.choice(chars) for _ in range(size))
-
 
 CO2_GCP_DB = 'postgresql://postgres:postgres@34.77.44.117:5432/postgres'
 TEST_DB = 'postgresql://postgres:postgres@localhost:5432/postgres'
@@ -119,10 +111,6 @@ class greenrecipe_db():
         return ingrd_db
 
     def get_cat_ingrd_list(self, category, verbose = False):
-        # TODO: Tasks pending completion -@hyeongkyunkim at 11/15/2022, 1:15:53 PM
-        # Get ingredient list of the category
-        # dummy_name = category + id_generator(size = 3)
-        # dummy_number = round(random.random(),7)
 
         cat = category
 

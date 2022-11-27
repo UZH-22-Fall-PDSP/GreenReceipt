@@ -3,8 +3,6 @@ import requests
 from bs4 import BeautifulSoup
 
 """
-TODO User default link without any parameter -> Get the serve value 'x' (class: adjust svelte-1o10zxc) -> User default link + ?units=metric&scale=x
-            (Simple but time consuming for double scrapping)
 TODO Coner case for scale 1/4
 TODO Scrap non-url ingredient by using textblob
 """
@@ -12,11 +10,12 @@ TODO Scrap non-url ingredient by using textblob
 def setDefaultURL(URLrecipename):
     url = 'https://www.food.com/recipe/' + URLrecipename
     r = requests.get(url)
+
     # get a correct url and scale to create full url
     html_doc = r.text
     soup = BeautifulSoup(html_doc, features="html.parser")
     serves = soup.find(class_="value svelte-1o10zxc").string
-    # print(serves)
+
     if len(serves) > 0 :
       if "/" in serves:
         serves = serves.split("/")
@@ -30,14 +29,6 @@ def requestRecipeUrl(input:str, verbose = False):
     # # INPUT(string) : Recipe name from food.com
     # # OUTPUT(Constructor | BeautifulSoup) : BeautifulSoup constructor of Recipe URL html
 
-    # EXPECTED_RECIPE_PAGE = 'food.com/recipe/'
-    # input.index(EXPECTED_RECIPE_PAGE)
-    # input = input.split('?')[0]
-    
-    # TODO: Tasks pending completion -@hyeongkyunkim at 11/15/2022, 12:55:05 PM
-    # apply default serve portion to the scaping url link
-
-    # url = 'https://www.food.com/recipe/' + input + '?units=metric&scale=10'
     url = setDefaultURL(input)
     r = requests.get(url)
     html_doc = r.text
@@ -75,7 +66,7 @@ def findIngrd(soup:BeautifulSoup):
     ultag = soup.find('ul', {'class': re.compile('^ingredient-list')})
     i = 0
     for litag in ultag.find_all('li'):
-        # print(f"{i+1}/{len(ultag.find_all('li'))}")
+
         quant_obj = litag.find('span', {'class': re.compile('quantity')})
         ingrd_obj = litag.find('span', {'class': re.compile('text')})
 

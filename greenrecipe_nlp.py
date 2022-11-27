@@ -2,8 +2,8 @@ from scipy.spatial import distance
 from gensim.models import FastText
 
 
-
 class greenrecipe_nlp():
+  
   def __init__(self, ingrd_list):
 
     self.ft = FastText.load('../model/fooddotcom_v3_gensim4')

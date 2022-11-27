@@ -41,8 +41,6 @@ class greenrecipe():
         return {'recipeName' : recipeName, 'totalCO2': total_co2, 'ingrdCO2List': ingrdList_co2}
 
     def get_ingrd_co2_emissions(self, ingrdList, verbose=False):
-        # TODO: Tasks pending completion -@hyeongkyunkim at 11/15/2022, 12:29:23 AM
-        # Unit Test
 
         if verbose: print("----------------------------------------\n## 1. TYPECAST Ingredient List....")
         typecast_ingrdList = []
@@ -63,8 +61,6 @@ class greenrecipe():
         return {'totalCO2': total_co2, 'ingrdCO2List': ingrdList_co2}
 
     def get_simingrdset_co2_emissions(self, ingrd, verbose=False):
-        # TODO: Tasks pending completion -@hyeongkyunkim at 11/15/2022, 12:36:17 AM
-        # Unit test
 
         ingrdList = [{'ingredient':ingrd}]
         
@@ -86,8 +82,7 @@ class greenrecipe():
         return ingrdList_co2
 
     def get_catingrdset_co2_emissions(self, category, verbose = False):
-        # TODO: Tasks pending completion -@hyeongkyunkim at 11/15/2022, 12:36:17 AM
-        # Unit test
+
         if verbose: print(f"----------------------------------------\n## 1. Query Ingredients in the category")
         cat_ingrd_co2_list = self.grp_db.get_cat_ingrd_list(category, verbose)
         return cat_ingrd_co2_list
