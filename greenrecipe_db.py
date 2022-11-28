@@ -40,7 +40,7 @@ class greenrecipe_db():
         #                   Ingredient CO2 Information List
         #                   { "ingredient" : <str: Ingredient name>, "co2" : <float: CO2 emission> }
 
-        ea_CONSTANT = 500 # 1ea = 500g
+        ea_CONSTANT = 1000 # 1ea = 1000g
         ml_to_g_CONSTANT = 1 # 1ml = 1g
         kg_to_g_CONSTANT = 1000 # 1kg = 1000g
 

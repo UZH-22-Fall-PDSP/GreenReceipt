@@ -74,7 +74,7 @@ def findIngrd(soup:BeautifulSoup):
         if (quant_obj != None) and (ingrd_obj != None):
             q_str = quant_obj.text.split('-')
             q_str = q_str[0] # [CornerCase] e.g. 10-13
-            q = float(q_str)/10 if q_str != '' else float(0) # scale down from 10 to 1
+            q = float(q_str) if q_str != '' else float(0)
 
             # ASSUME : If there is no unit, the unit as 'ea'
             _u = ingrd_obj.text.split()[0]
