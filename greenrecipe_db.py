@@ -57,7 +57,7 @@ class greenrecipe_db():
             ingrd_co2 = emissions_df[emissions_df.ingredient == ingrd_name]['emissions'].values[0]
 
             unit = ingrd['unit']
-            if (unit == 'ml'):
+            if (unit == 'ml'): # change every quantity unit to kg
                 q = ingrd['quantity'] * ml_to_g_CONSTANT / kg_to_g_CONSTANT
                 co2 = round(q * ingrd_co2, 7)
             elif (unit == 'g'):
