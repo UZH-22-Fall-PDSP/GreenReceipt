@@ -12,7 +12,6 @@ class greenrecipe():
         self.grp_db = db.greenrecipe_db()
         print("## db constructor success!")
         print("GCP DB Tables : ",self.grp_db.gcp_db_engine.table_names())   
-        print("REF DB Tables : ",self.grp_db.ref_db_engine.table_names())   
         print("----------------------------------------") 
         self.grp_nlp = nlp.greenrecipe_nlp(self.grp_db.get_ingrd_list())
         print("## nlp constructor success!")  

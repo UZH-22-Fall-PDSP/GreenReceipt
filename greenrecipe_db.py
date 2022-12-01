@@ -8,7 +8,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy.orm import declarative_base
 from sqlalchemy.dialects.postgresql import insert
 
-CO2_GCP_DB = 'postgresql://postgres:postgres@34.77.44.117:5432/postgres'
+CO2_GCP_DB = 'postgresql://postgres:postgres@35.228.50.60:5432/postgres'
 TEST_DB = 'postgresql://postgres:postgres@localhost:5432/postgres'
 
 Base = declarative_base()
@@ -17,19 +17,17 @@ class greenrecipe_db():
 
     def __init__(self):
 
-        self.ref_db_engine = sqlalchemy.create_engine(CO2_GCP_DB)
-        self.ref_db_con = self.ref_db_engine.connect()
+        self.gcp_db_engine = sqlalchemy.create_engine(CO2_GCP_DB)
+        self.gcp_db_con = self.gcp_db_engine.connect()
+        
         self.ref_db_emissions_df = pd.read_sql_table(
-            "emissions",
-            con=self.ref_db_engine,
+            "emissions_category",
+            con=self.gcp_db_engine,
             columns=['ingredient',
                     'emissions',
                     'category'],
         )
 
-        self.gcp_db_engine = sqlalchemy.create_engine(CO2_GCP_DB)
-        self.gcp_db_con = self.gcp_db_engine.connect()
-        
         self.Userhistory = Table('userhistory', Base.metadata, autoload=True, autoload_with=self.gcp_db_engine)
         self.Nlpsimresult = Table('nlpsimresult', Base.metadata, autoload=True, autoload_with=self.gcp_db_engine)
 
@@ -102,7 +100,7 @@ class greenrecipe_db():
         return isExist, total_co2, ingrdList_co2
 
     def get_ingrd_list(self):
-        rs = self.ref_db_con.execute('SELECT distinct(ingredient) FROM emissions')
+        rs = self.gcp_db_con.execute('SELECT distinct(ingredient) FROM emissions')
 
         ingrd_db = []
         for r in rs:
